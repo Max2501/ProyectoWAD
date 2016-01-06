@@ -116,7 +116,7 @@
                         <p>
                             Para llevar a cabo sus tareas puede utilizar herramientas como reportes o
                             gráficas para facilitar el manejo de información y obtener estadísticas
-                            de las sucursales o managers que administra.s
+                            de las sucursales o managers que administra.
                         </p>
                     </div>
                     <div class="clearfix"> </div>

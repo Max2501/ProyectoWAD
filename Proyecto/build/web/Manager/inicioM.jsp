@@ -75,9 +75,11 @@
                     <nav class="top-nav">
                         <ul class="top-nav">
                             <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                            <li><a href="SucursalServlet?accion=consultar">Sucursales</a></li>
-                            <li><a href="ManagerServlet?accion=consultar">Managers</a></li>
-                            <li><a href="#portfolio">Reportes</a></li>
+                            <li><a href="SucursalServlet?accion=consultar">Empleados</a></li>
+                            <li><a href="ManagerServlet?accion=consultar">Películas</a></li>
+                            <li><a href="#portfolio">Salas</a></li>
+                            <li><a href="#contact">Artículos</a></li>
+                            <li><a href="#contact">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>
                             <li><a href="#contact">Configuración</a></li>
                             <li><a href="#contact">Cerrar sesión</a></li>
@@ -94,29 +96,30 @@
             <div class="container">
                 <div class="feature-grids">
                     <div class="col-md-4 feature-grid">
-                        <h3>Sucursales</h3>
+                        <h3>Empleados</h3>
                         <p>
-                            Este tipo de usuario puede realizar varias operaciones, entre éstas están
-                            alta, baja, cambios y consultas sobre las sucursales con las cuales va a contar
-                            la cadena de cine, ingresando su dirección.
+                            Este tipo de usuario se encarga de realizar las operaciones a un nivel local,
+                            es decir, al nivel del cine realizaondo operaciones como altas, bajas, cambios y
+                            consultas de empleados del cine, salas, películas y artículos para vender dentro
+                            de la sucursal.
                         </p>
                     </div>
                     
                     <div class="col-md-4 feature-grid">
-                        <h3>Managers</h3>
+                        <h3>Películas</h3>
                         <p>
-                            Puede realizar las operaciones correspondientes a los managers
-                            de cada una de las sucursales para que éstos lleven la administración
-                            por separado y organicen a sus empleados y las películas que se presentarán.
+                            Da de alta películas, las cuales se proyectan en las salas de la sucursal, puede
+                            poner horarios para cada película, precios por sala y también por artículos como
+                            alimentos, bebidas o dulces.
                         </p>
                     </div>
 
                     <div class="col-md-4 feature-grid">
                         <h3>Administración</h3>
                         <p>
-                            Para llevar a cabo sus tareas puede utilizar herramientas como reportes o
-                            gráficas para facilitar el manejo de información y obtener estadísticas
-                            de las sucursales o managers que administra.
+                            Utiliza herramientas como reportes y gráficas sobre estadísticas de películas por
+                            cada sala, todo esto para poder dividir el trabajo y tener un mejor desempeño.
+                            El manager es el encargado de toda la administración de una sucursal completa.
                         </p>
                     </div>
                     <div class="clearfix"> </div>

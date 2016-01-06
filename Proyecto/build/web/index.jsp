@@ -70,7 +70,7 @@
         <div class="top-header">
             <div class="container">
                 <div class="logo">
-                    <h1>PAPIYON</h1>
+                    <h1>Inicio</h1>
                 </div>
                 <!----start-top-nav---->
                 <div class="clearfix"> </div>

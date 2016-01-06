@@ -8,19 +8,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Proyecto Final</title>
-        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <title>Agregar sucursal</title>
+        <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
         <!-- Custom Theme files -->
-        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <link href="../css/style.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     </script>
     <!---- start-smoth-scrolling---->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="../js/move-top.js"></script>
+    <script type="text/javascript" src="../js/easing.js"></script>
 
     <script type="text/javascript">
             jQuery(document).ready(function($) {
@@ -53,7 +53,7 @@
         });
     </script>
     <!----//End-top-nav-script---->
-    <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+    <script src="../js/easyResponsiveTabs.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#horizontalTab').easyResponsiveTabs({
@@ -84,15 +84,35 @@
             <div class="feature-grids" style="align-items: center; justify-content: center; display: flex">
                 <form method="post" action="InicioSesionServlet">
                     <div class="feature-grid">
-                        <h3><span class="fea-icon1"> </span>Correo:</h3>
-                        <p><input type="text" name="txtCorreo" required/></p>
-                    </div><br>
+                        <h3>Nombre sucursal:</h3>
+                        <p><input type="text" name="txtNombre" required/></p>
+                    </div>
                     <div class="feature-grid">
-                        <h3><span class="fea-icon1"> </span>Contraseña:</h3>
-                        <p><input type="password" name="txtContrasena" required/></p>
-                    </div><br>
+                        <h3>Calle:</h3>
+                        <p><input type="text" name="txtCalle" required/></p>
+                    </div>
+                    <div class="feature-grid">
+                        <h3>Número:</h3>
+                        <p><input type="text" name="txtNum" required/></p>
+                    </div>
+                    <div class="feature-grid">
+                        <h3>Código Postal:</h3>
+                        <p><input type="text" name="txtCP" required/></p>
+                    </div>
+                    <div class="feature-grid">
+                        <h3>Colonia:</h3>
+                        <p><input type="text" name="txtColonia" required/></p>
+                    </div>
+                    <div class="feature-grid">
+                        <h3>Entidad Federativa:</h3>
+                        <p><input type="text" name="txtEntidad" required/></p>
+                    </div>
+                    <div class="feature-grid">
+                        <h3>Delegación o Municipio:</h3>
+                        <p><input type="text" name="txtDelegacion" required/></p>
+                    </div>
                     <div class="feature-grid" style="align-items: center; justify-content: center; display: flex">
-                        <div class="button"><span><a href="#">Iniciar Sesion</a></span></div>
+                        <div class="button"><span><a href="#">Registrar sucursal</a></span></div>
                     </div>
                 </form>
 
