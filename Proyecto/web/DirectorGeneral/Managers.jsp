@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sucursales</title>
+        <title>Managers</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
@@ -71,14 +71,14 @@
             <div class="top-header">
                 <div class="container">
                     <div class="logo">
-                        <h1>SUCURSALES</h1>
+                        <h1>MANAGERS</h1>
                     </div>
                     <!----start-top-nav---->
                     <nav class="top-nav">
                         <ul class="top-nav">
                             <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                            <li><a href="SucursalServlet?accion=consultar">Sucursales</a></li>
-                            <li><a href="ManagerServlet?accion=consultar">Managers</a></li>
+                            <li><a href="sucursales.jsp">Sucursales</a></li>
+                            <li><a href="managers.jsp">Managers</a></li>
                             <li><a href="#portfolio">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>
                             <li><a href="#contact">Configuración</a></li>
@@ -94,30 +94,32 @@
 
         <div class="Themes">
             <div class="feature-grid" style="justify-content: center; display: flex">
-                <div class="button"><span><a href="SucursalServlet?accion=agregar">Agregar Sucursal</a></span></div>
+                <div class="button"><span><a href="SucursalServlet?accion=agregar">Agregar Manager</a></span></div>
             </div>
             <div class="container">
                 <div class="feature-grids">
                     <div class="feature-grid">
                         <table class="rwd-table" style="margin: 0 auto">
+                            <th>Correo</th>
                             <th>Nombre</th>
-                            <th>Calle</th>
-                            <th>Número</th>
-                            <th>Colonia</th>
-                            <th>CP</th>
-                            <th>Delegación<br>Municipio</th>
-                            <th>Entidad<br>Federativa</th>
+                            <th>Apellido<br>Paterno</th>
+                            <th>Apellido<br>Materno</th>
+                            <th>Sucursal</th>
+                            <th>Salario</th>
+                            <th>Género</th>
+                            <th>Edad</th>
                             <th>Acción</th>
                             
-                            <c:forEach var="sucursales" items="${listaDeSucursales}">
+                            <c:forEach var="managers" items="${listaDeManagers}">
                             <tr>
-                                <td><c:out value="${sucursales.nombreSucursal}" /></td>
-                                <td><c:out value="${sucursales.calle}"/></td>
-                                <td><c:out value="${sucursales.numero}"/></td>
-                                <td><c:out value="${sucursales.colonia}"/></td>
-                                <td><c:out value="${sucursales.codigoPostal}"/></td>
-                                <td><c:out value="${sucursales.delegacionmunicipio}"/></td>
-                                <td><c:out value="${sucursales.entidadfederativa}"/></td>
+                                <td><c:out value="${managers.email}" /></td>
+                                <td><c:out value="${managers.nombre}"/></td>
+                                <td><c:out value="${managers.apPaterno}"/></td>
+                                <td><c:out value="${managers.apMaterno}"/></td>
+                                <td><c:out value="${managers.sucursal}"/></td>
+                                <td><c:out value="${managers.salario}"/></td>
+                                <td><c:out value="${managers.genero}"/></td>
+                                <td><c:out value="${managers.edad}"/></td>
                                 <td>
                                     <a href="SucursalServlet?accion=eliminar&id=${carreras.idCarrera}"><img src='../images/eliminar.jpg'></a>
                                     <a href="SucursalServlet?accion=actualizar&id=${carreras.idCarrera}"><img src='../images/editar.jpg'></a>
@@ -131,31 +133,6 @@
                 <div class="clearfix"> </div>
             </div>
             <div class="clearfix"> </div>
-        </div>
-        <div class="services" id="services">
-            <div class="container">
-                <div class="h-part">
-                    <h3 class="m_5">MAPA</h3>
-                    <p>Consulte cualquier sucursal por medio de este mapa.</p>
-                </div>
-                <div id="map" style="margin: 0 auto; align-items: center; justify-content: center; display: flex">
-
-                </div>
-                <script src="https://maps.googleapis.com/maps/api/js"></script>
-                <script>
-                  function initialize() {
-                    var mapCanvas = document.getElementById('map');
-                    var mapOptions = {
-                      center: new google.maps.LatLng(19.6261735, -99.10009529999999),
-                      zoom: 8,
-                      mapTypeId: google.maps.MapTypeId.ROADMAP
-                    }
-                    var map = new google.maps.Map(mapCanvas, mapOptions)
-                  }
-                  google.maps.event.addDomListener(window, 'load', initialize);
-                </script>
-                <div class="clear"></div>
-            </div>
         </div>
         <!---//End-da-features----->	
         <!--- portfolio ---->
