@@ -5,6 +5,8 @@ import com.ipn.mx.clases.Entidadfederativa;
 import com.ipn.mx.clases.Sucursal;
 import com.ipn.mx.modelo.SucursalDAO;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -51,11 +53,13 @@ public class SucursalServlet extends HttpServlet {
         try{	
             SucursalDAO d = new SucursalDAO();
             request.setAttribute("listaDeSucursales", d.readAll());
-            response.sendRedirect("/DirectorGeneral/sucursales.jsp");
-//            RequestDispatcher vista = request.getRequestDispatcher("/DirectorGeneral/sucursales.jsp");
-//            vista.forward(request,response);
+            RequestDispatcher vista = request.getRequestDispatcher("/DirectorGeneral/sucursales.jsp");
+            vista.forward(request,response);
 	}catch(IOException e){
-	}
+            e.printStackTrace();
+	} catch (ServletException ex) {
+            Logger.getLogger(SucursalServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     private void agregarSucursal(HttpServletRequest request, HttpServletResponse response) {
@@ -71,7 +75,8 @@ public class SucursalServlet extends HttpServlet {
         s.setColonia(request.getParameter("txtColonia"));
         s.setDelegacionmunicipio(del);
         d.create(s);
-        listaDeSucursales(request, response);
+        //listaDeSucursales(request, response);
+//        holi
     }
     
     private void eliminarSucursal(HttpServletRequest request, HttpServletResponse response) {
