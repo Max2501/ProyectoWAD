@@ -77,8 +77,8 @@
                     <nav class="top-nav">
                         <ul class="top-nav">
                             <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                            <li><a href="SucursalServlet?accion=consultar">Sucursales</a></li>
-                            <li><a href="ManagerServlet?accion=consultar">Managers</a></li>
+                            <li><a href="../SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
+                            <li><a href="../ManagerServlet?accion=consultar">Managers</a></li>
                             <li><a href="#portfolio">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>
                             <li><a href="#contact">Configuración</a></li>
@@ -94,7 +94,7 @@
 
         <div class="Themes">
             <div class="feature-grid" style="justify-content: center; display: flex">
-                <div class="button"><span><a href="SucursalServlet?accion=agregar">Agregar Sucursal</a></span></div>
+                <div class="button"><span><a href="AgregarSucursal.jsp">Agregar Sucursal</a></span></div>
             </div>
             <div class="container">
                 <div class="feature-grids">
@@ -119,8 +119,8 @@
                                 <td><c:out value="${sucursales.delegacionmunicipio}"/></td>
                                 <td><c:out value="${sucursales.entidadfederativa}"/></td>
                                 <td>
-                                    <a href="SucursalServlet?accion=eliminar&id=${carreras.idCarrera}"><img src='../images/eliminar.jpg'></a>
-                                    <a href="SucursalServlet?accion=actualizar&id=${carreras.idCarrera}"><img src='../images/editar.jpg'></a>
+                                    <a href="SucursalServlet?accion=eliminar&id=${sucursales.idSucursal}"><img src='../images/eliminar.jpg'></a>
+                                    <a href="SucursalServlet?accion=actualizar&id=${sucursales.idSucursal}"><img src='../images/editar.jpg'></a>
                                 </td>
                             </tr>
                             </c:forEach>                            

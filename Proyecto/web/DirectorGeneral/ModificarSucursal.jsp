@@ -4,11 +4,12 @@
     Author     : Max
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Agregar sucursal</title>
+        <title>Modificar sucursal</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
@@ -70,7 +71,7 @@
         <div class="top-header">
             <div class="container">
                 <div class="logo">
-                    <h1>Agregar</h1>
+                    <h1>Inicio</h1>
                 </div>
                 <!----start-top-nav---->
                 <div class="clearfix"> </div>
@@ -82,25 +83,25 @@
     <div class="Themes">
         <div class="container">
             <div class="feature-grids">
-                <form method="post" action="SucursalServlet">
+                <form method="post" action="InicioSesionServlet">
                     <div class="col-md-4 feature-grid">
                         <h3>Nombre sucursal:</h3>
-                        <p><input type="text" name="txtNombre" required/></p>
+                        <p><input type="text" name="txtNombre" value="${sucursal.nombre}" required/></p>
                         <h3>Calle:</h3>
-                        <p><input type="text" name="txtCalle" required/></p>
+                        <p><input type="text" name="txtCalle" value="${sucursal.calle}" required/></p>
                         <h3>Número:</h3>
-                        <p><input type="text" name="txtNum" required/></p>
+                        <p><input type="text" name="txtNum" value="${sucursal.numero}" required/></p>
                         <h3>Código Postal:</h3>
-                        <p><input type="text" name="txtCP" required/></p>
+                        <p><input type="text" name="txtCP" value="${sucursal.codigoPostal}" required/></p>
                     </div>
                     <div class="col-md-4 feature-grid">
                         <h3>Colonia:</h3>
-                        <p><input type="text" name="txtColonia" required/></p>
+                        <p><input type="text" name="txtColonia" value="${sucursal.colonia}" required/></p>
                         <h3>Entidad Federativa:</h3>
-                        <p><input type="text" name="txtEntidad" required/></p>
+                        <p><input type="text" name="txtEntidad" value="${sucursal.entidadfederativa}" required/></p>
                         <h3>Delegación o Municipio:</h3>
-                        <p><input type="text" name="txtDelegacion" required/></p>
-                        <input class="button" type="submit" value="Agregar sucursal">
+                        <p><input type="text" name="txtDelegacion" value="${sucursal.delegacionmunicipio}" required/></p>
+                        <br><div class="button"><span><a href="#">Registrar sucursal</a></span></div>
                     </div>
                 </form>
 

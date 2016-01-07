@@ -70,7 +70,7 @@
         <div class="top-header">
             <div class="container">
                 <div class="logo">
-                    <h1>Inicio</h1>
+                    <h1>Agregar</h1>
                 </div>
                 <!----start-top-nav---->
                 <div class="clearfix"> </div>
@@ -81,38 +81,26 @@
     
     <div class="Themes">
         <div class="container">
-            <div class="feature-grids" style="align-items: center; justify-content: center; display: flex">
-                <form method="post" action="InicioSesionServlet">
-                    <div class="feature-grid">
+            <div class="feature-grids">
+                <form method="post" action="SucursalServlet">
+                    <div class="col-md-4 feature-grid">
                         <h3>Nombre sucursal:</h3>
                         <p><input type="text" name="txtNombre" required/></p>
-                    </div>
-                    <div class="feature-grid">
                         <h3>Calle:</h3>
                         <p><input type="text" name="txtCalle" required/></p>
-                    </div>
-                    <div class="feature-grid">
                         <h3>Número:</h3>
                         <p><input type="text" name="txtNum" required/></p>
-                    </div>
-                    <div class="feature-grid">
                         <h3>Código Postal:</h3>
                         <p><input type="text" name="txtCP" required/></p>
                     </div>
-                    <div class="feature-grid">
+                    <div class="col-md-4 feature-grid">
                         <h3>Colonia:</h3>
                         <p><input type="text" name="txtColonia" required/></p>
-                    </div>
-                    <div class="feature-grid">
                         <h3>Entidad Federativa:</h3>
                         <p><input type="text" name="txtEntidad" required/></p>
-                    </div>
-                    <div class="feature-grid">
                         <h3>Delegación o Municipio:</h3>
                         <p><input type="text" name="txtDelegacion" required/></p>
-                    </div>
-                    <div class="feature-grid" style="align-items: center; justify-content: center; display: flex">
-                        <div class="button"><span><a href="#">Registrar sucursal</a></span></div>
+                        <input class="button" type="submit" value="Agregar sucursal">
                     </div>
                 </form>
 

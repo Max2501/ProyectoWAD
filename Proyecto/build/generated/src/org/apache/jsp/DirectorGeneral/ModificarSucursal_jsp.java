@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class AgregarSucursal_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class ModificarSucursal_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -44,10 +44,11 @@ public final class AgregarSucursal_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
-      out.write("        <title>Agregar sucursal</title>\n");
+      out.write("        <title>Modificar sucursal</title>\n");
       out.write("        <link href=\"../css/bootstrap.css\" rel='stylesheet' type='text/css' />\n");
       out.write("        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\n");
       out.write("        <script src=\"../js/jquery.min.js\"></script>\n");
@@ -120,25 +121,39 @@ public final class AgregarSucursal_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("    \n");
       out.write("    <div class=\"Themes\">\n");
       out.write("        <div class=\"container\">\n");
-      out.write("            <div class=\"feature-grids\" style=\"align-items: center; justify-content: center; display: flex\">\n");
+      out.write("            <div class=\"feature-grids\">\n");
       out.write("                <form method=\"post\" action=\"InicioSesionServlet\">\n");
       out.write("                    <div class=\"col-md-4 feature-grid\">\n");
       out.write("                        <h3>Nombre sucursal:</h3>\n");
-      out.write("                        <p><input type=\"text\" name=\"txtNombre\" required/></p>\n");
+      out.write("                        <p><input type=\"text\" name=\"txtNombre\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursal.nombre}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" required/></p>\n");
       out.write("                        <h3>Calle:</h3>\n");
-      out.write("                        <p><input type=\"text\" name=\"txtCalle\" required/></p>\n");
+      out.write("                        <p><input type=\"text\" name=\"txtCalle\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursal.calle}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" required/></p>\n");
       out.write("                        <h3>Número:</h3>\n");
-      out.write("                        <p><input type=\"text\" name=\"txtNum\" required/></p>\n");
+      out.write("                        <p><input type=\"text\" name=\"txtNum\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursal.numero}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" required/></p>\n");
       out.write("                        <h3>Código Postal:</h3>\n");
-      out.write("                        <p><input type=\"text\" name=\"txtCP\" required/></p>\n");
+      out.write("                        <p><input type=\"text\" name=\"txtCP\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursal.codigoPostal}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" required/></p>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"col-md-4 feature-grid\">\n");
       out.write("                        <h3>Colonia:</h3>\n");
-      out.write("                        <p><input type=\"text\" name=\"txtColonia\" required/></p>\n");
+      out.write("                        <p><input type=\"text\" name=\"txtColonia\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursal.colonia}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" required/></p>\n");
       out.write("                        <h3>Entidad Federativa:</h3>\n");
-      out.write("                        <p><input type=\"text\" name=\"txtEntidad\" required/></p>\n");
+      out.write("                        <p><input type=\"text\" name=\"txtEntidad\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursal.entidadfederativa}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" required/></p>\n");
       out.write("                        <h3>Delegación o Municipio:</h3>\n");
-      out.write("                        <p><input type=\"text\" name=\"txtDelegacion\" required/></p>\n");
+      out.write("                        <p><input type=\"text\" name=\"txtDelegacion\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursal.delegacionmunicipio}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" required/></p>\n");
       out.write("                        <br><div class=\"button\"><span><a href=\"#\">Registrar sucursal</a></span></div>\n");
       out.write("                    </div>\n");
       out.write("                </form>\n");
