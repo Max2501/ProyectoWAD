@@ -10,18 +10,18 @@
 <html>
     <head>
         <title>Sucursales</title>
-        <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="../js/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <!-- Custom Theme files -->
-        <link href="../css/style.css" rel='stylesheet' type='text/css' />
-        <link href="../css/EstiloTabla.css" rel='stylesheet' type='text/css' />
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <link href="css/EstiloTabla.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
         <!---- start-smoth-scrolling---->
-        <script type="text/javascript" src="../js/move-top.js"></script>
-        <script type="text/javascript" src="../js/easing.js"></script>
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
 
         <script type="text/javascript">
                 jQuery(document).ready(function($) {
@@ -54,7 +54,7 @@
             });
         </script>
         <!----//End-top-nav-script---->
-        <script src="../js/easyResponsiveTabs.js" type="text/javascript"></script>
+        <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#horizontalTab').easyResponsiveTabs({
@@ -84,7 +84,7 @@
                             <li><a href="#contact">Configuración</a></li>
                             <li><a href="#contact">Cerrar sesión</a></li>
                         </ul>
-                        <a href="#" id="pull"><img src="../images/menu-icon.png" title="menu" /></a>
+                        <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
                     </nav>
                     <div class="clearfix"> </div>
                 </div>
@@ -119,8 +119,8 @@
                                 <td><c:out value="${sucursales.delegacionmunicipio.nombreDelegacionMunicipio}"/></td>
                                 <td><c:out value="${sucursales.delegacionmunicipio.entidadfederativa.nombreEntidadFederativa}"/></td>
                                 <td>
-                                    <a href="SucursalServlet?accion=eliminar&id=${sucursales.idSucursal}"><img src='../images/eliminar.jpg'></a>
-                                    <a href="SucursalServlet?accion=actualizar&id=${sucursales.idSucursal}"><img src='../images/editar.jpg'></a>
+                                    <a href="SucursalServlet?accion=eliminar&id=${sucursales.idSucursal}"><img src='images/eliminar.jpg'></a>
+                                    <a href="SucursalServlet?accion=actualizar&id=${sucursales.idSucursal}"><img src='images/editar.jpg'></a>
                                 </td>
                             </tr>
                             </c:forEach>                            
