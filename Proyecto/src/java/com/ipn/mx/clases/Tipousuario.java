@@ -25,7 +25,6 @@ public class Tipousuario  implements java.io.Serializable {
 
      private Integer idTipoUsuario;
      private String descTipoUsuario;
-     private Set usuarios = new HashSet(0);
 
     public Tipousuario() {
     }
@@ -34,11 +33,6 @@ public class Tipousuario  implements java.io.Serializable {
     public Tipousuario(String descTipoUsuario) {
         this.descTipoUsuario = descTipoUsuario;
     }
-    public Tipousuario(String descTipoUsuario, Set usuarios) {
-       this.descTipoUsuario = descTipoUsuario;
-       this.usuarios = usuarios;
-    }
-   
      @Id @GeneratedValue(strategy=IDENTITY)
 
     
@@ -60,18 +54,6 @@ public class Tipousuario  implements java.io.Serializable {
     public void setDescTipoUsuario(String descTipoUsuario) {
         this.descTipoUsuario = descTipoUsuario;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="tipousuario")
-    public Set getUsuarios() {
-        return this.usuarios;
-    }
-    
-    public void setUsuarios(Set usuarios) {
-        this.usuarios = usuarios;
-    }
-
-
-
 
 }
 

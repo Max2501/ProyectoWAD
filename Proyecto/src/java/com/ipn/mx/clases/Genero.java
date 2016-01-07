@@ -25,7 +25,6 @@ public class Genero  implements java.io.Serializable {
 
      private Integer idGenero;
      private String nombreGenero;
-     private Set peliculas = new HashSet(0);
 
     public Genero() {
     }
@@ -34,11 +33,6 @@ public class Genero  implements java.io.Serializable {
     public Genero(String nombreGenero) {
         this.nombreGenero = nombreGenero;
     }
-    public Genero(String nombreGenero, Set peliculas) {
-       this.nombreGenero = nombreGenero;
-       this.peliculas = peliculas;
-    }
-   
      @Id @GeneratedValue(strategy=IDENTITY)
 
     
@@ -60,18 +54,6 @@ public class Genero  implements java.io.Serializable {
     public void setNombreGenero(String nombreGenero) {
         this.nombreGenero = nombreGenero;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="genero")
-    public Set getPeliculas() {
-        return this.peliculas;
-    }
-    
-    public void setPeliculas(Set peliculas) {
-        this.peliculas = peliculas;
-    }
-
-
-
 
 }
 

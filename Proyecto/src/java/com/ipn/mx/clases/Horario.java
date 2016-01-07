@@ -25,7 +25,6 @@ public class Horario  implements java.io.Serializable {
 
      private Integer idHorario;
      private String horario;
-     private Set salahorarios = new HashSet(0);
 
     public Horario() {
     }
@@ -34,11 +33,6 @@ public class Horario  implements java.io.Serializable {
     public Horario(String horario) {
         this.horario = horario;
     }
-    public Horario(String horario, Set salahorarios) {
-       this.horario = horario;
-       this.salahorarios = salahorarios;
-    }
-   
      @Id @GeneratedValue(strategy=IDENTITY)
 
     
@@ -60,19 +54,6 @@ public class Horario  implements java.io.Serializable {
     public void setHorario(String horario) {
         this.horario = horario;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="horario")
-    public Set getSalahorarios() {
-        return this.salahorarios;
-    }
-    
-    public void setSalahorarios(Set salahorarios) {
-        this.salahorarios = salahorarios;
-    }
-
-
-
-
 }
 
 

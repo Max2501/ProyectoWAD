@@ -30,8 +30,6 @@ public class Sala  implements java.io.Serializable {
      private Tiposala tiposala;
      private int numeroFilas;
      private int numeroAsientos;
-     private Set asientos = new HashSet(0);
-     private Set salahorarios = new HashSet(0);
 
     public Sala() {
     }
@@ -41,13 +39,11 @@ public class Sala  implements java.io.Serializable {
         this.numeroFilas = numeroFilas;
         this.numeroAsientos = numeroAsientos;
     }
-    public Sala(Pelicula pelicula, Tiposala tiposala, int numeroFilas, int numeroAsientos, Set asientos, Set salahorarios) {
+    public Sala(Pelicula pelicula, Tiposala tiposala, int numeroFilas, int numeroAsientos) {
        this.pelicula = pelicula;
        this.tiposala = tiposala;
        this.numeroFilas = numeroFilas;
        this.numeroAsientos = numeroAsientos;
-       this.asientos = asientos;
-       this.salahorarios = salahorarios;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -101,27 +97,6 @@ public class Sala  implements java.io.Serializable {
     public void setNumeroAsientos(int numeroAsientos) {
         this.numeroAsientos = numeroAsientos;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="sala")
-    public Set getAsientos() {
-        return this.asientos;
-    }
-    
-    public void setAsientos(Set asientos) {
-        this.asientos = asientos;
-    }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="sala")
-    public Set getSalahorarios() {
-        return this.salahorarios;
-    }
-    
-    public void setSalahorarios(Set salahorarios) {
-        this.salahorarios = salahorarios;
-    }
-
-
-
 
 }
 

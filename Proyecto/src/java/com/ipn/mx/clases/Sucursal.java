@@ -32,7 +32,6 @@ public class Sucursal  implements java.io.Serializable {
      private int numero;
      private String codigoPostal;
      private String colonia;
-     private Set usuarios = new HashSet(0);
 
     public Sucursal() {
     }
@@ -45,15 +44,6 @@ public class Sucursal  implements java.io.Serializable {
         this.numero = numero;
         this.codigoPostal = codigoPostal;
         this.colonia = colonia;
-    }
-    public Sucursal(Delegacionmunicipio delegacionmunicipio, String nombreSucursal, String calle, int numero, String codigoPostal, String colonia, Set usuarios) {
-       this.delegacionmunicipio = delegacionmunicipio;
-       this.nombreSucursal = nombreSucursal;
-       this.calle = calle;
-       this.numero = numero;
-       this.codigoPostal = codigoPostal;
-       this.colonia = colonia;
-       this.usuarios = usuarios;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -127,18 +117,6 @@ public class Sucursal  implements java.io.Serializable {
     public void setColonia(String colonia) {
         this.colonia = colonia;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="sucursal")
-    public Set getUsuarios() {
-        return this.usuarios;
-    }
-    
-    public void setUsuarios(Set usuarios) {
-        this.usuarios = usuarios;
-    }
-
-
-
 
 }
 

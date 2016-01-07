@@ -25,7 +25,6 @@ public class Entidadfederativa  implements java.io.Serializable {
 
      private Integer idEntidadFederativa;
      private String nombreEntidadFederativa;
-     private Set delegacionmunicipios = new HashSet(0);
 
     public Entidadfederativa() {
     }
@@ -34,11 +33,6 @@ public class Entidadfederativa  implements java.io.Serializable {
     public Entidadfederativa(String nombreEntidadFederativa) {
         this.nombreEntidadFederativa = nombreEntidadFederativa;
     }
-    public Entidadfederativa(String nombreEntidadFederativa, Set delegacionmunicipios) {
-       this.nombreEntidadFederativa = nombreEntidadFederativa;
-       this.delegacionmunicipios = delegacionmunicipios;
-    }
-   
      @Id @GeneratedValue(strategy=IDENTITY)
 
     
@@ -60,18 +54,6 @@ public class Entidadfederativa  implements java.io.Serializable {
     public void setNombreEntidadFederativa(String nombreEntidadFederativa) {
         this.nombreEntidadFederativa = nombreEntidadFederativa;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="entidadfederativa")
-    public Set getDelegacionmunicipios() {
-        return this.delegacionmunicipios;
-    }
-    
-    public void setDelegacionmunicipios(Set delegacionmunicipios) {
-        this.delegacionmunicipios = delegacionmunicipios;
-    }
-
-
-
 
 }
 

@@ -28,7 +28,6 @@ public class Delegacionmunicipio  implements java.io.Serializable {
      private Integer idDelegacionMunicipio;
      private Entidadfederativa entidadfederativa;
      private String nombreDelegacionMunicipio;
-     private Set sucursals = new HashSet(0);
 
     public Delegacionmunicipio() {
     }
@@ -37,11 +36,6 @@ public class Delegacionmunicipio  implements java.io.Serializable {
     public Delegacionmunicipio(Entidadfederativa entidadfederativa, String nombreDelegacionMunicipio) {
         this.entidadfederativa = entidadfederativa;
         this.nombreDelegacionMunicipio = nombreDelegacionMunicipio;
-    }
-    public Delegacionmunicipio(Entidadfederativa entidadfederativa, String nombreDelegacionMunicipio, Set sucursals) {
-       this.entidadfederativa = entidadfederativa;
-       this.nombreDelegacionMunicipio = nombreDelegacionMunicipio;
-       this.sucursals = sucursals;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -75,18 +69,6 @@ public class Delegacionmunicipio  implements java.io.Serializable {
     public void setNombreDelegacionMunicipio(String nombreDelegacionMunicipio) {
         this.nombreDelegacionMunicipio = nombreDelegacionMunicipio;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="delegacionmunicipio")
-    public Set getSucursals() {
-        return this.sucursals;
-    }
-    
-    public void setSucursals(Set sucursals) {
-        this.sucursals = sucursals;
-    }
-
-
-
 
 }
 

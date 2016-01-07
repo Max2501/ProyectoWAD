@@ -31,7 +31,6 @@ public class Pelicula  implements java.io.Serializable {
      private int duracion;
      private String resumen;
      private String clasificacion;
-     private Set salas = new HashSet(0);
 
     public Pelicula() {
     }
@@ -42,13 +41,12 @@ public class Pelicula  implements java.io.Serializable {
         this.duracion = duracion;
         this.resumen = resumen;
     }
-    public Pelicula(Genero genero, String nombrePelicula, int duracion, String resumen, String clasificacion, Set salas) {
+    public Pelicula(Genero genero, String nombrePelicula, int duracion, String resumen, String clasificacion) {
        this.genero = genero;
        this.nombrePelicula = nombrePelicula;
        this.duracion = duracion;
        this.resumen = resumen;
        this.clasificacion = clasificacion;
-       this.salas = salas;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -112,18 +110,6 @@ public class Pelicula  implements java.io.Serializable {
     public void setClasificacion(String clasificacion) {
         this.clasificacion = clasificacion;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pelicula")
-    public Set getSalas() {
-        return this.salas;
-    }
-    
-    public void setSalas(Set salas) {
-        this.salas = salas;
-    }
-
-
-
 
 }
 

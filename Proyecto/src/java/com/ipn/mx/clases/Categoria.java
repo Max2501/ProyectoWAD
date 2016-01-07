@@ -26,7 +26,6 @@ public class Categoria  implements java.io.Serializable {
      private Integer idCategoria;
      private String nombreCategoria;
      private String descripcion;
-     private Set articulos = new HashSet(0);
 
     public Categoria() {
     }
@@ -35,11 +34,6 @@ public class Categoria  implements java.io.Serializable {
     public Categoria(String nombreCategoria, String descripcion) {
         this.nombreCategoria = nombreCategoria;
         this.descripcion = descripcion;
-    }
-    public Categoria(String nombreCategoria, String descripcion, Set articulos) {
-       this.nombreCategoria = nombreCategoria;
-       this.descripcion = descripcion;
-       this.articulos = articulos;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -73,19 +67,6 @@ public class Categoria  implements java.io.Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="categoria")
-    public Set getArticulos() {
-        return this.articulos;
-    }
-    
-    public void setArticulos(Set articulos) {
-        this.articulos = articulos;
-    }
-
-
-
-
 }
 
 

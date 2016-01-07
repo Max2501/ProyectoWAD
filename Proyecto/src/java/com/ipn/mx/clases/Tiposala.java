@@ -26,7 +26,6 @@ public class Tiposala  implements java.io.Serializable {
      private Integer idTipoSala;
      private String nombreTipoSala;
      private double precio;
-     private Set salas = new HashSet(0);
 
     public Tiposala() {
     }
@@ -35,11 +34,6 @@ public class Tiposala  implements java.io.Serializable {
     public Tiposala(String nombreTipoSala, double precio) {
         this.nombreTipoSala = nombreTipoSala;
         this.precio = precio;
-    }
-    public Tiposala(String nombreTipoSala, double precio, Set salas) {
-       this.nombreTipoSala = nombreTipoSala;
-       this.precio = precio;
-       this.salas = salas;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -73,18 +67,6 @@ public class Tiposala  implements java.io.Serializable {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="tiposala")
-    public Set getSalas() {
-        return this.salas;
-    }
-    
-    public void setSalas(Set salas) {
-        this.salas = salas;
-    }
-
-
-
 
 }
 
