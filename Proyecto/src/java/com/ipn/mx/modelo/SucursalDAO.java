@@ -91,7 +91,7 @@ public class SucursalDAO {
         List resultado = null;
         try {
             t.begin();
-            Query q = s.createQuery("from sucursal");
+            Query q = s.createQuery("from Sucursal");
             resultado = q.list();
             t.commit();
         } catch (HibernateException he) {
