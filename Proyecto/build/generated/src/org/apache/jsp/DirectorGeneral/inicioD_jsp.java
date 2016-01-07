@@ -114,7 +114,7 @@ public final class inicioD_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <nav class=\"top-nav\">\n");
       out.write("                        <ul class=\"top-nav\">\n");
       out.write("                            <li class=\"active\"><a href=\"#home\" class=\"scroll\">Inicio</a></li>\n");
-      out.write("                            <li><a href=\"SucursalServlet?accion=consultar\">Sucursales</a></li>\n");
+      out.write("                            <li><a href=\"../SucursalServlet?accion=listaDeSucursales\">Sucursales</a></li>\n");
       out.write("                            <li><a href=\"ManagerServlet?accion=consultar\">Managers</a></li>\n");
       out.write("                            <li><a href=\"#portfolio\">Reportes</a></li>\n");
       out.write("                            <li><a href=\"#contact\">Gráficas</a></li>\n");

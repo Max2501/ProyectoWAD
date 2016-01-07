@@ -104,7 +104,6 @@
                         <br><div class="button"><span><a href="#">Registrar sucursal</a></span></div>
                     </div>
                 </form>
-
                 <div class="clearfix"> </div>
             </div>
             <div class="clearfix"> </div>

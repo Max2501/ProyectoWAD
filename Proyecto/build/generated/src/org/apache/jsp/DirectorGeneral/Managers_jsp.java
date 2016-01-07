@@ -61,7 +61,7 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
-      out.write("        <title>Sucursales</title>\n");
+      out.write("        <title>Managers</title>\n");
       out.write("        <link href=\"../css/bootstrap.css\" rel='stylesheet' type='text/css' />\n");
       out.write("        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\n");
       out.write("        <script src=\"../js/jquery.min.js\"></script>\n");
@@ -123,7 +123,7 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"top-header\">\n");
       out.write("                <div class=\"container\">\n");
       out.write("                    <div class=\"logo\">\n");
-      out.write("                        <h1>SUCURSALES</h1>\n");
+      out.write("                        <h1>MANAGERS</h1>\n");
       out.write("                    </div>\n");
       out.write("                    <!----start-top-nav---->\n");
       out.write("                    <nav class=\"top-nav\">\n");
@@ -146,19 +146,20 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("        <div class=\"Themes\">\n");
       out.write("            <div class=\"feature-grid\" style=\"justify-content: center; display: flex\">\n");
-      out.write("                <div class=\"button\"><span><a href=\"SucursalServlet?accion=agregar\">Agregar Sucursal</a></span></div>\n");
+      out.write("                <div class=\"button\"><span><a href=\"SucursalServlet?accion=agregar\">Agregar Manager</a></span></div>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"container\">\n");
       out.write("                <div class=\"feature-grids\">\n");
       out.write("                    <div class=\"feature-grid\">\n");
       out.write("                        <table class=\"rwd-table\" style=\"margin: 0 auto\">\n");
+      out.write("                            <th>Correo</th>\n");
       out.write("                            <th>Nombre</th>\n");
-      out.write("                            <th>Calle</th>\n");
-      out.write("                            <th>Número</th>\n");
-      out.write("                            <th>Colonia</th>\n");
-      out.write("                            <th>CP</th>\n");
-      out.write("                            <th>Delegación<br>Municipio</th>\n");
-      out.write("                            <th>Entidad<br>Federativa</th>\n");
+      out.write("                            <th>Apellido<br>Paterno</th>\n");
+      out.write("                            <th>Apellido<br>Materno</th>\n");
+      out.write("                            <th>Sucursal</th>\n");
+      out.write("                            <th>Salario</th>\n");
+      out.write("                            <th>Género</th>\n");
+      out.write("                            <th>Edad</th>\n");
       out.write("                            <th>Acción</th>\n");
       out.write("                            \n");
       out.write("                            ");
@@ -172,31 +173,6 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"clearfix\"> </div>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"clearfix\"> </div>\n");
-      out.write("        </div>\n");
-      out.write("        <div class=\"services\" id=\"services\">\n");
-      out.write("            <div class=\"container\">\n");
-      out.write("                <div class=\"h-part\">\n");
-      out.write("                    <h3 class=\"m_5\">MAPA</h3>\n");
-      out.write("                    <p>Consulte cualquier sucursal por medio de este mapa.</p>\n");
-      out.write("                </div>\n");
-      out.write("                <div id=\"map\" style=\"margin: 0 auto; align-items: center; justify-content: center; display: flex\">\n");
-      out.write("\n");
-      out.write("                </div>\n");
-      out.write("                <script src=\"https://maps.googleapis.com/maps/api/js\"></script>\n");
-      out.write("                <script>\n");
-      out.write("                  function initialize() {\n");
-      out.write("                    var mapCanvas = document.getElementById('map');\n");
-      out.write("                    var mapOptions = {\n");
-      out.write("                      center: new google.maps.LatLng(19.6261735, -99.10009529999999),\n");
-      out.write("                      zoom: 8,\n");
-      out.write("                      mapTypeId: google.maps.MapTypeId.ROADMAP\n");
-      out.write("                    }\n");
-      out.write("                    var map = new google.maps.Map(mapCanvas, mapOptions)\n");
-      out.write("                  }\n");
-      out.write("                  google.maps.event.addDomListener(window, 'load', initialize);\n");
-      out.write("                </script>\n");
-      out.write("                <div class=\"clear\"></div>\n");
-      out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        <!---//End-da-features----->\t\n");
       out.write("        <!--- portfolio ---->\n");
@@ -277,8 +253,8 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setVar("sucursales");
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listaDeSucursales}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setVar("managers");
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listaDeManagers}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
@@ -312,6 +288,10 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("</td>\n");
           out.write("                                <td>");
           if (_jspx_meth_c_out_6((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+            return true;
+          out.write("</td>\n");
+          out.write("                                <td>");
+          if (_jspx_meth_c_out_7((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("</td>\n");
           out.write("                                <td>\n");
@@ -351,7 +331,7 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_0.setPageContext(_jspx_page_context);
     _jspx_th_c_out_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursales.nombreSucursal}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${managers.email}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_0 = _jspx_th_c_out_0.doStartTag();
     if (_jspx_th_c_out_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
@@ -369,7 +349,7 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_1 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_1.setPageContext(_jspx_page_context);
     _jspx_th_c_out_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursales.calle}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${managers.nombre}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_1 = _jspx_th_c_out_1.doStartTag();
     if (_jspx_th_c_out_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_1);
@@ -387,7 +367,7 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_2 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_2.setPageContext(_jspx_page_context);
     _jspx_th_c_out_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursales.numero}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${managers.apPaterno}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_2 = _jspx_th_c_out_2.doStartTag();
     if (_jspx_th_c_out_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_2);
@@ -405,7 +385,7 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_3 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_3.setPageContext(_jspx_page_context);
     _jspx_th_c_out_3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursales.colonia}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${managers.apMaterno}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_3 = _jspx_th_c_out_3.doStartTag();
     if (_jspx_th_c_out_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_3);
@@ -423,7 +403,7 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_4 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_4.setPageContext(_jspx_page_context);
     _jspx_th_c_out_4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_4.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursales.codigoPostal}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_4.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${managers.sucursal}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_4 = _jspx_th_c_out_4.doStartTag();
     if (_jspx_th_c_out_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_4);
@@ -441,7 +421,7 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_5 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_5.setPageContext(_jspx_page_context);
     _jspx_th_c_out_5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_5.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursales.delegacionmunicipio}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_5.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${managers.salario}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_5 = _jspx_th_c_out_5.doStartTag();
     if (_jspx_th_c_out_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_5);
@@ -459,13 +439,31 @@ public final class Managers_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_6 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_6.setPageContext(_jspx_page_context);
     _jspx_th_c_out_6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sucursales.entidadfederativa}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${managers.genero}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_6 = _jspx_th_c_out_6.doStartTag();
     if (_jspx_th_c_out_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_6);
       return true;
     }
     _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_6);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_out_7(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:out
+    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_7 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
+    _jspx_th_c_out_7.setPageContext(_jspx_page_context);
+    _jspx_th_c_out_7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_c_out_7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${managers.edad}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_c_out_7 = _jspx_th_c_out_7.doStartTag();
+    if (_jspx_th_c_out_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_7);
+      return true;
+    }
+    _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_7);
     return false;
   }
 }

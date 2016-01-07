@@ -82,7 +82,7 @@
     <div class="Themes">
         <div class="container">
             <div class="feature-grids">
-                <form method="post" action="SucursalServlet">
+                <form method="post" action="../SucursalServlet?accion=nuevo">
                     <div class="col-md-4 feature-grid">
                         <h3>Nombre sucursal:</h3>
                         <p><input type="text" name="txtNombre" required/></p>
@@ -100,7 +100,9 @@
                         <p><input type="text" name="txtEntidad" required/></p>
                         <h3>Delegación o Municipio:</h3>
                         <p><input type="text" name="txtDelegacion" required/></p>
-                        <input class="button" type="submit" value="Agregar sucursal">
+                        <br><input type="submit" value="Agregar sucursal">
+                        
+                        <br><div class="button"><span><a href="#">Registrar sucursal</a></span></div>
                     </div>
                 </form>
 

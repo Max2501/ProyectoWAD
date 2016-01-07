@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Modificar sucursal</title>
+        <title>Modificar manager</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
@@ -71,7 +71,7 @@
         <div class="top-header">
             <div class="container">
                 <div class="logo">
-                    <h1>Inicio</h1>
+                    <h1>Modificar</h1>
                 </div>
                 <!----start-top-nav---->
                 <div class="clearfix"> </div>
@@ -85,22 +85,26 @@
             <div class="feature-grids">
                 <form method="post" action="InicioSesionServlet">
                     <div class="col-md-4 feature-grid">
-                        <h3>Nombre sucursal:</h3>
-                        <p><input type="text" name="txtNombre" value="${sucursal.nombre}" required/></p>
-                        <h3>Calle:</h3>
-                        <p><input type="text" name="txtCalle" value="${sucursal.calle}" required/></p>
-                        <h3>Número:</h3>
-                        <p><input type="text" name="txtNum" value="${sucursal.numero}" required/></p>
-                        <h3>Código Postal:</h3>
-                        <p><input type="text" name="txtCP" value="${sucursal.codigoPostal}" required/></p>
+                        <h3>Nombre:</h3>
+                        <p><input type="text" name="txtNombre" value="${manager.nombre}" required/></p>
+                        <h3>Apellido Paterno:</h3>
+                        <p><input type="text" name="txtApPaterno value="${manager.apPaterno}" required/></p>
+                        <h3>Apellido Materno:</h3>
+                        <p><input type="text" name="txtApMaterno" value="${manager.apMaterno}" required/></p>
+                        <h3>Correo:</h3>
+                        <p><input type="text" name="txtCorreo" value="${manager.email}" required/></p>
+                        <h3>Contrasenia:</h3>
+                        <p><input type="text" name="txtContrasena" value="${manager.contrasena}" required/></p>
                     </div>
                     <div class="col-md-4 feature-grid">
-                        <h3>Colonia:</h3>
-                        <p><input type="text" name="txtColonia" value="${sucursal.colonia}" required/></p>
-                        <h3>Entidad Federativa:</h3>
-                        <p><input type="text" name="txtEntidad" value="${sucursal.entidadfederativa}" required/></p>
-                        <h3>Delegación o Municipio:</h3>
-                        <p><input type="text" name="txtDelegacion" value="${sucursal.delegacionmunicipio}" required/></p>
+                        <h3>Sucursal:</h3>
+                        <p><input type="text" name="txtSucursal" value="${manager.sucursal}" required/></p>
+                        <h3>Salario:</h3>
+                        <p><input type="text" name="txtSalario" value="${manager.salario}" required/></p>
+                        <h3>Género:</h3>
+                        <p><input type="text" name="txtGenero" value="${manager.genero}" required/></p>
+                        <h3>Edad:</h3>
+                        <p><input type="text" name="txtEdad" value="${manager.edad}" required/></p>
                         <br><div class="button"><span><a href="#">Registrar sucursal</a></span></div>
                     </div>
                 </form>

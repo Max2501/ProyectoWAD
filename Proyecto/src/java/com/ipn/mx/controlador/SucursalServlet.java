@@ -65,7 +65,7 @@ public class SucursalServlet extends HttpServlet {
 
         s.setNombreSucursal(request.getParameter("txtNombre"));
         s.setCalle(request.getParameter("txtCalle"));
-        s.setNumero(Integer.parseInt(request.getParameter("txtNumero")));
+        s.setNumero(Integer.parseInt(request.getParameter("txtNum")));
         s.setCodigoPostal(request.getParameter("txtCP"));
         s.setColonia(request.getParameter("txtColonia"));
         s.setDelegacionmunicipio(del);

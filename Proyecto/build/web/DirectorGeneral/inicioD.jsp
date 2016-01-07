@@ -75,7 +75,7 @@
                     <nav class="top-nav">
                         <ul class="top-nav">
                             <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                            <li><a href="SucursalServlet?accion=consultar">Sucursales</a></li>
+                            <li><a href="../SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
                             <li><a href="ManagerServlet?accion=consultar">Managers</a></li>
                             <li><a href="#portfolio">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>

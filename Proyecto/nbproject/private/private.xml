@@ -4,13 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/web/DirectorGeneral/Sucursales.jsp</file>
-            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/src/java/com/ipn/mx/clases/Sucursal.java</file>
             <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/web/DirectorGeneral/AgregarSucursal.jsp</file>
-            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/web/index.jsp</file>
-            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/web/DirectorGeneral/Managers.jsp</file>
-            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/src/java/com/ipn/mx/clases/Usuario.java</file>
-            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/web/Manager/inicioM.jsp</file>
-            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/web/Manager/Empleados.jsp</file>
+            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/web/DirectorGeneral/ModificarSucursal.jsp</file>
+            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/src/java/com/ipn/mx/conf/HibernateUtil.java</file>
+            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/web/DirectorGeneral/inicioD.jsp</file>
+            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/src/java/com/ipn/mx/controlador/SucursalServlet.java</file>
+            <file>file:/C:/Users/Max/Desktop/ProyectoWAD/Proyecto/src/java/com/ipn/mx/modelo/SucursalDAO.java</file>
         </group>
     </open-files>
 </project-private>
