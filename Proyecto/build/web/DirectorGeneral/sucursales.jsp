@@ -116,8 +116,8 @@
                                 <td><c:out value="${sucursales.numero}"/></td>
                                 <td><c:out value="${sucursales.colonia}"/></td>
                                 <td><c:out value="${sucursales.codigoPostal}"/></td>
-                                <td><c:out value="${sucursales.delegacionmunicipio}"/></td>
-                                <td><c:out value="${sucursales.entidadfederativa}"/></td>
+                                <td><c:out value="${sucursales.delegacionmunicipio.nombreDelegacionMunicipio}"/></td>
+                                <td><c:out value="${sucursales.delegacionmunicipio.entidadfederativa.nombreEntidadFederativa}"/></td>
                                 <td>
                                     <a href="SucursalServlet?accion=eliminar&id=${sucursales.idSucursal}"><img src='../images/eliminar.jpg'></a>
                                     <a href="SucursalServlet?accion=actualizar&id=${sucursales.idSucursal}"><img src='../images/editar.jpg'></a>
