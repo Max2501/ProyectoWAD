@@ -51,7 +51,7 @@ public class SucursalServlet extends HttpServlet {
         try{	
             SucursalDAO d = new SucursalDAO();
             request.setAttribute("listaDeSucursales", d.readAll());
-            RequestDispatcher vista = request.getRequestDispatcher("../Sucursales.jsp");
+            RequestDispatcher vista = request.getRequestDispatcher("../sucursales.jsp");
             vista.forward(request,response);
 	}catch(ServletException | IOException e){
 	}

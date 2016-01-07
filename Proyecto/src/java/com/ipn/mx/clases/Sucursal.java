@@ -118,6 +118,11 @@ public class Sucursal  implements java.io.Serializable {
         this.colonia = colonia;
     }
 
+    @Override
+    public String toString() {
+        return "Sucursal{" + "idSucursal=" + idSucursal + ", delegacionmunicipio=" + delegacionmunicipio + ", nombreSucursal=" + nombreSucursal + ", calle=" + calle + ", numero=" + numero + ", codigoPostal=" + codigoPostal + ", colonia=" + colonia + '}';
+    }
+
 }
 
 
