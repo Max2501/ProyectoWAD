@@ -94,7 +94,7 @@
 
         <div class="Themes">
             <div class="feature-grid" style="justify-content: center; display: flex">
-                <div class="button"><span><a href="AgregarSucursal.jsp">Agregar Sucursal</a></span></div>
+                <div class="button"><span><a href="DirectorGeneral/AgregarSucursal.jsp">Agregar Sucursal</a></span></div>
             </div>
             <div class="container">
                 <div class="feature-grids">
