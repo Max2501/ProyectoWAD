@@ -120,7 +120,7 @@
                                 <td><c:out value="${sucursales.delegacionmunicipio.entidadfederativa.nombreEntidadFederativa}"/></td>
                                 <td>
                                     <a href="SucursalServlet?accion=eliminar&id=${sucursales.idSucursal}"><img src='images/eliminar.jpg'></a>
-                                    <a href="DirectorGeneral/ModificarSucursal.jsp?sucursal=${sucursales}"><img src='images/editar.jpg'></a>
+                                    <a href="SucursalServlet?accion=modificar&id=${sucursales.idSucursal}"><img src='images/editar.jpg'></a>
                                 </td>
                             </tr>
                             </c:forEach>                            

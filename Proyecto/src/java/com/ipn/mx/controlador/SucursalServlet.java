@@ -42,8 +42,13 @@ public class SucursalServlet extends HttpServlet {
                 if(accion.equals("eliminar")){
                     eliminarSucursal(request,response);
                 }else{
-                    if(accion.equals("actualizar")){
-                        actualizarSucursal(request,response);
+                    if(accion.equals("modificar")){
+                        modificarSucursal(request,response);
+                    }
+                    else{
+                        if(accion.equals("actualizar")){
+                            actualizarSucursal(request,response);
+                        }
                     }
                 }
             }
@@ -106,6 +111,22 @@ public class SucursalServlet extends HttpServlet {
         s.setColonia(request.getParameter("txtColonia"));
         s.setDelegacionmunicipio(del);
         d.update(s);        
+    }
+    
+    private void modificarSucursal(HttpServletRequest request, HttpServletResponse response) {
+        try{	
+            SucursalDAO d = new SucursalDAO();
+            Sucursal s = new Sucursal();
+            s.setIdSucursal(Integer.parseInt(request.getParameter("id")));
+            request.setAttribute("sucursal", d.read(s));
+            System.out.println(d.read(s));
+            RequestDispatcher vista = request.getRequestDispatcher("/DirectorGeneral/ModificarSucursal.jsp");
+            vista.forward(request,response);
+	}catch(IOException e){
+            e.printStackTrace();
+	} catch (ServletException ex) {
+            Logger.getLogger(SucursalServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
