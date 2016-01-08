@@ -76,8 +76,8 @@
                     <!----start-top-nav---->
                     <nav class="top-nav">
                         <ul class="top-nav">
-                            <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                            <li><a href="../SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
+                            <li class="active"><a href="DirectorGeneral/inicioD.jsp" class="scroll">Inicio</a></li>
+                            <li><a href="SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
                             <li><a href="../ManagerServlet?accion=consultar">Managers</a></li>
                             <li><a href="#portfolio">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>
@@ -120,7 +120,7 @@
                                 <td><c:out value="${sucursales.delegacionmunicipio.entidadfederativa.nombreEntidadFederativa}"/></td>
                                 <td>
                                     <a href="SucursalServlet?accion=eliminar&id=${sucursales.idSucursal}"><img src='images/eliminar.jpg'></a>
-                                    <a href="SucursalServlet?accion=actualizar&id=${sucursales.idSucursal}"><img src='images/editar.jpg'></a>
+                                    <a href="DirectorGeneral/ModificarSucursal.jsp?sucursal=${sucursales}"><img src='images/editar.jpg'></a>
                                 </td>
                             </tr>
                             </c:forEach>                            

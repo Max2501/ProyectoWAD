@@ -3,6 +3,7 @@ package com.ipn.mx.controlador;
 import com.ipn.mx.clases.Delegacionmunicipio;
 import com.ipn.mx.clases.Entidadfederativa;
 import com.ipn.mx.clases.Sucursal;
+import com.ipn.mx.modelo.DelegacionMunicipioDAO;
 import com.ipn.mx.modelo.SucursalDAO;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -65,8 +66,11 @@ public class SucursalServlet extends HttpServlet {
     private void agregarSucursal(HttpServletRequest request, HttpServletResponse response) {
         SucursalDAO d = new SucursalDAO();
         Sucursal s = new Sucursal();
-        Entidadfederativa entidad = new Entidadfederativa(request.getParameter("txtEntidad"));
-        Delegacionmunicipio del = new Delegacionmunicipio(entidad, request.getParameter("txtDelegacion"));
+        
+        Delegacionmunicipio del = new Delegacionmunicipio();
+        DelegacionMunicipioDAO delDao = new DelegacionMunicipioDAO();
+        del.setIdDelegacionMunicipio(Integer.parseInt(request.getParameter("txtDelegacion")));
+        del = delDao.read(del);
 
         s.setNombreSucursal(request.getParameter("txtNombre"));
         s.setCalle(request.getParameter("txtCalle"));
@@ -75,14 +79,14 @@ public class SucursalServlet extends HttpServlet {
         s.setColonia(request.getParameter("txtColonia"));
         s.setDelegacionmunicipio(del);
         d.create(s);
-        //listaDeSucursales(request, response);
-//        holi
+        listaDeSucursales(request, response);
     }
     
     private void eliminarSucursal(HttpServletRequest request, HttpServletResponse response) {
         SucursalDAO d = new SucursalDAO();
         Sucursal s = new Sucursal();
         s.setIdSucursal(Integer.parseInt(request.getParameter("id")));
+        s = d.read(s);
         d.delete(s);
         listaDeSucursales(request, response);
     }
@@ -97,7 +101,7 @@ public class SucursalServlet extends HttpServlet {
         d.read(s);
         s.setNombreSucursal(request.getParameter("txtNombre"));
         s.setCalle(request.getParameter("txtCalle"));
-        s.setNumero(Integer.parseInt(request.getParameter("txtNumero")));
+        s.setNumero(Integer.parseInt(request.getParameter("txtNum")));
         s.setCodigoPostal(request.getParameter("txtCP"));
         s.setColonia(request.getParameter("txtColonia"));
         s.setDelegacionmunicipio(del);

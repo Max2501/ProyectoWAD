@@ -104,4 +104,24 @@ public class DelegacionMunicipioDAO {
 
         return resultado;
     }
+    
+    public List<Delegacionmunicipio> readAllByState(String idEstado){
+        Session s = HibernateUtil.getSessionFactory().openSession();
+        Transaction t = s.getTransaction();
+        List resultado = null;
+        try{
+            t.begin();
+            Query q = s.createQuery("from Delegacionmunicipio where idEntidadFederativa = :id");
+            q.setParameter("id", idEstado);
+            resultado = q.list();
+            t.commit();
+        } catch(HibernateException he){
+            if(t.isActive()) {
+                t.rollback();
+            }
+        } finally {
+            s.close();
+        }
+        return resultado;
+    }
 }

@@ -23,6 +23,19 @@
     <script type="text/javascript" src="../js/move-top.js"></script>
     <script type="text/javascript" src="../js/easing.js"></script>
 
+    <script>
+        //carga al inicio, cuando el objeto document esté listo
+        $(document).ready(function(){
+            $("#estados").load("../LlenarEstado");
+        });
+        function showMunicipios(){
+            //obtiene los objetos estados, y obtiene el valor del objeto
+            var estado = $("#estados").val(); //ya se tiene el objeto select
+            //llama al servlet con el parametro seleccionado
+            $("#municipios").load("../LlenarMunicipio", {estados:estado});
+        }
+    </script>
+    
     <script type="text/javascript">
             jQuery(document).ready(function($) {
             $(".scroll").click(function (event) {
@@ -83,10 +96,10 @@
     <div class="Themes">
         <div class="container">
             <div class="feature-grids">
-                <form method="post" action="InicioSesionServlet">
+                <form method="post" action="SucursalServlet?accion=actualizar">
                     <div class="col-md-4 feature-grid">
                         <h3>Nombre sucursal:</h3>
-                        <p><input type="text" name="txtNombre" value="${sucursal.nombre}" required/></p>
+                        <p><input type="text" name="txtNombre" value="${sucursal.nombreSucursal}" required/></p>
                         <h3>Calle:</h3>
                         <p><input type="text" name="txtCalle" value="${sucursal.calle}" required/></p>
                         <h3>Número:</h3>
@@ -95,12 +108,14 @@
                         <p><input type="text" name="txtCP" value="${sucursal.codigoPostal}" required/></p>
                     </div>
                     <div class="col-md-4 feature-grid">
+                        <h3>Entidad Federativa:</h3>
+                        <p><select id="estados" name="txtEntidad" onchange='showMunicipios()'>
+                           </select></p>
+                        <h3>Delegación o Municipio:</h3>
+                        <p><select id="municipios" name="txtDelegacion">
+                           </select></p>
                         <h3>Colonia:</h3>
                         <p><input type="text" name="txtColonia" value="${sucursal.colonia}" required/></p>
-                        <h3>Entidad Federativa:</h3>
-                        <p><input type="text" name="txtEntidad" value="${sucursal.entidadfederativa}" required/></p>
-                        <h3>Delegación o Municipio:</h3>
-                        <p><input type="text" name="txtDelegacion" value="${sucursal.delegacionmunicipio}" required/></p>
                         <br><div class="button"><span><a href="#">Registrar sucursal</a></span></div>
                     </div>
                 </form>

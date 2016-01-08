@@ -17,10 +17,23 @@
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    </script>
+
     <!---- start-smoth-scrolling---->
     <script type="text/javascript" src="../js/move-top.js"></script>
     <script type="text/javascript" src="../js/easing.js"></script>
+    
+    <script>
+        //carga al inicio, cuando el objeto document esté listo
+        $(document).ready(function(){
+            $("#estados").load("../LlenarEstado");
+        });
+        function showMunicipios(){
+            //obtiene los objetos estados, y obtiene el valor del objeto
+            var estado = $("#estados").val(); //ya se tiene el objeto select
+            //llama al servlet con el parametro seleccionado
+            $("#municipios").load("../LlenarMunicipio", {estados:estado});
+        }
+    </script>
 
     <script type="text/javascript">
             jQuery(document).ready(function($) {
@@ -94,12 +107,14 @@
                         <p><input type="text" name="txtCP" required/></p>
                     </div>
                     <div class="col-md-4 feature-grid">
+                        <h3>Entidad Federativa:</h3>
+                        <p><select id="estados" name="txtEntidad" onchange='showMunicipios()'>
+                           </select></p>
+                        <h3>Delegación o Municipio:</h3>
+                        <p><select id="municipios" name="txtDelegacion">
+                           </select></p>
                         <h3>Colonia:</h3>
                         <p><input type="text" name="txtColonia" required/></p>
-                        <h3>Entidad Federativa:</h3>
-                        <p><input type="text" name="txtEntidad" required/></p>
-                        <h3>Delegación o Municipio:</h3>
-                        <p><input type="text" name="txtDelegacion" required/></p>
                         <br><input type="submit" value="Agregar sucursal">
                         
                         <br><div class="button"><span><a href="#">Registrar sucursal</a></span></div>

@@ -4,16 +4,39 @@
         <servlet-name>SucursalServlet</servlet-name>
         <servlet-class>com.ipn.mx.controlador.SucursalServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LlenarEstado</servlet-name>
+        <servlet-class>com.ipn.mx.controlador.LlenarEstado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LlenarMunicipio</servlet-name>
+        <servlet-class>com.ipn.mx.controlador.LlenarMunicipio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LlenarColonia</servlet-name>
+        <servlet-class>com.ipn.mx.controlador.LlenarColonia</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SucursalServlet</servlet-name>
         <url-pattern>/SucursalServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LlenarEstado</servlet-name>
+        <url-pattern>/LlenarEstado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LlenarMunicipio</servlet-name>
+        <url-pattern>/LlenarMunicipio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LlenarColonia</servlet-name>
+        <url-pattern>/LlenarColonia</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
     <welcome-file-list>
         <welcome-file>
             
