@@ -4,7 +4,7 @@
     Author     : Max
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,6 +16,7 @@
         <link href="../css/style.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
         <!---- start-smoth-scrolling---->
         <script type="text/javascript" src="../js/move-top.js"></script>
@@ -78,9 +79,9 @@
                             <li><a href="../SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
                             <li><a href="ManagerServlet?accion=consultar">Managers</a></li>
                             <li><a href="#portfolio">Reportes</a></li>
-                            <li><a href="#contact">GrÃ¡ficas</a></li>
-                            <li><a href="#contact">ConfiguraciÃ³n</a></li>
-                            <li><a href="#contact">Cerrar sesiÃ³n</a></li>
+                            <li><a href="#contact">Gráficas</a></li>
+                            <li><a href="#contact">Configuración</a></li>
+                            <li><a href="#contact">Cerrar sesión</a></li>
                         </ul>
                         <a href="#" id="pull"><img src="../images/menu-icon.png" title="menu" /></a>
                     </nav>
@@ -96,9 +97,9 @@
                     <div class="col-md-4 feature-grid">
                         <h3>Sucursales</h3>
                         <p>
-                            Este tipo de usuario puede realizar varias operaciones, entre Ã©stas estÃ¡n
+                            Este tipo de usuario puede realizar varias operaciones, entre éstas están
                             alta, baja, cambios y consultas sobre las sucursales con las cuales va a contar
-                            la cadena de cine, ingresando su direcciÃ³n.
+                            la cadena de cine, ingresando su dirección.
                         </p>
                     </div>
                     
@@ -106,16 +107,16 @@
                         <h3>Managers</h3>
                         <p>
                             Puede realizar las operaciones correspondientes a los managers
-                            de cada una de las sucursales para que Ã©stos lleven la administraciÃ³n
-                            por separado y organicen a sus empleados y las pelÃ­culas que se presentarÃ¡n.
+                            de cada una de las sucursales para que éstos lleven la administración
+                            por separado y organicen a sus empleados y las películas que se presentarán.
                         </p>
                     </div>
 
                     <div class="col-md-4 feature-grid">
-                        <h3>AdministraciÃ³n</h3>
+                        <h3>Administración</h3>
                         <p>
                             Para llevar a cabo sus tareas puede utilizar herramientas como reportes o
-                            grÃ¡ficas para facilitar el manejo de informaciÃ³n y obtener estadÃ­sticas
+                            gráficas para facilitar el manejo de información y obtener estadísticas
                             de las sucursales o managers que administra.
                         </p>
                     </div>
@@ -132,7 +133,7 @@
                 <div class="container">
                     <div class="col-md-4 footer-grid footer-grid1">
                         <div class="f-bout">
-                            <h4>ContÃ¡ctanos</h4>
+                            <h4>Contáctanos</h4>
                                  <h5>Correo:</h5>
                             <h6><a href="mailto:alitamonse@hotmail.com">alitamonse@hotmail.com</a></h6>
                             <h6><a href="mailto:max300394@hotmail.com">max300394@hotmail.com</a></h6>
@@ -141,7 +142,7 @@
                     </div>
                     <div class="col-md-4 footer-grid footer-grid3">
                         <div class="recent-tweet">
-                            <h4>SÃ­guenos en...</h4>
+                            <h4>Síguenos en...</h4>
                             <div class="social">	
                                 <ul>	
                                     <li><a href="#"><span class="alo-icon"> </span></a></li>
@@ -159,7 +160,7 @@
             <div class="bottom">
                 <div class="container">
                     <div class="copy-right">
-                        <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max VÃ¡zquez</p>
+                        <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max Vázquez</p>
                     </div>								
                     <div class="clearfix"> </div>
                     <script type="text/javascript">

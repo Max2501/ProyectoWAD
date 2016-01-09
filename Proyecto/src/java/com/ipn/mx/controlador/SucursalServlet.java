@@ -99,18 +99,21 @@ public class SucursalServlet extends HttpServlet {
     private void actualizarSucursal(HttpServletRequest request, HttpServletResponse response) {
         SucursalDAO d = new SucursalDAO();
         Sucursal s = new Sucursal();
-        Entidadfederativa entidad = new Entidadfederativa(request.getParameter("txtEntidad"));
-        Delegacionmunicipio del = new Delegacionmunicipio(entidad, request.getParameter("txtDelegacion"));
+        
+        Delegacionmunicipio del = new Delegacionmunicipio();
+        DelegacionMunicipioDAO delDao = new DelegacionMunicipioDAO();
+        del.setIdDelegacionMunicipio(Integer.parseInt(request.getParameter("txtDelegacion")));
+        del = delDao.read(del);
         
         s.setIdSucursal(Integer.parseInt(request.getParameter("id")));
-        d.read(s);
         s.setNombreSucursal(request.getParameter("txtNombre"));
         s.setCalle(request.getParameter("txtCalle"));
         s.setNumero(Integer.parseInt(request.getParameter("txtNum")));
         s.setCodigoPostal(request.getParameter("txtCP"));
         s.setColonia(request.getParameter("txtColonia"));
         s.setDelegacionmunicipio(del);
-        d.update(s);        
+        d.update(s); 
+        listaDeSucursales(request, response);
     }
     
     private void modificarSucursal(HttpServletRequest request, HttpServletResponse response) {
@@ -119,7 +122,6 @@ public class SucursalServlet extends HttpServlet {
             Sucursal s = new Sucursal();
             s.setIdSucursal(Integer.parseInt(request.getParameter("id")));
             request.setAttribute("sucursal", d.read(s));
-            System.out.println(d.read(s));
             RequestDispatcher vista = request.getRequestDispatcher("/DirectorGeneral/ModificarSucursal.jsp");
             vista.forward(request,response);
 	}catch(IOException e){

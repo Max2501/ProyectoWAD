@@ -5,7 +5,7 @@
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,6 +17,7 @@
         <link href="../css/style.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     </script>
     <!---- start-smoth-scrolling---->
@@ -101,7 +102,7 @@
                         <p><input type="text" name="txtSucursal" value="${manager.sucursal}" required/></p>
                         <h3>Salario:</h3>
                         <p><input type="text" name="txtSalario" value="${manager.salario}" required/></p>
-                        <h3>GÃ©nero:</h3>
+                        <h3>Género:</h3>
                         <p><input type="text" name="txtGenero" value="${manager.genero}" required/></p>
                         <h3>Edad:</h3>
                         <p><input type="text" name="txtEdad" value="${manager.edad}" required/></p>
@@ -121,7 +122,7 @@
             <div class="container">
                 <div class="col-md-4 footer-grid footer-grid1">
                     <div class="f-bout">
-                        <h4>ContÃ¡ctanos</h4>
+                        <h4>Contáctanos</h4>
                              <h5>Correo:</h5>
                         <h6><a href="mailto:alitamonse@hotmail.com">alitamonse@hotmail.com</a></h6>
                         <h6><a href="mailto:max300394@hotmail.com">max300394@hotmail.com</a></h6>
@@ -130,7 +131,7 @@
                 </div>
                 <div class="col-md-4 footer-grid footer-grid3">
                     <div class="recent-tweet">
-                        <h4>SÃ­guenos en...</h4>
+                        <h4>Síguenos en...</h4>
                         <div class="social">	
                             <ul>	
                                 <li><a href="#"><span class="alo-icon"> </span></a></li>
@@ -148,7 +149,7 @@
         <div class="bottom">
             <div class="container">
                 <div class="copy-right">
-                    <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max VÃ¡zquez</p>
+                    <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max Vázquez</p>
                 </div>								
                 <div class="clearfix"> </div>
                 <script type="text/javascript">

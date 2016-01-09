@@ -4,7 +4,7 @@
     Author     : Max
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,6 +16,7 @@
         <link href="../css/style.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
     <!---- start-smoth-scrolling---->
@@ -23,7 +24,7 @@
     <script type="text/javascript" src="../js/easing.js"></script>
     
     <script>
-        //carga al inicio, cuando el objeto document estÃ© listo
+        //carga al inicio, cuando el objeto document esté listo
         $(document).ready(function(){
             $("#estados").load("../LlenarEstado");
         });
@@ -101,16 +102,16 @@
                         <p><input type="text" name="txtNombre" required/></p>
                         <h3>Calle:</h3>
                         <p><input type="text" name="txtCalle" required/></p>
-                        <h3>NÃºmero:</h3>
+                        <h3>Número:</h3>
                         <p><input type="text" name="txtNum" required/></p>
-                        <h3>CÃ³digo Postal:</h3>
+                        <h3>Código Postal:</h3>
                         <p><input type="text" name="txtCP" required/></p>
                     </div>
                     <div class="col-md-4 feature-grid">
                         <h3>Entidad Federativa:</h3>
                         <p><select id="estados" name="txtEntidad" onchange='showMunicipios()'>
                            </select></p>
-                        <h3>DelegaciÃ³n o Municipio:</h3>
+                        <h3>Delegación o Municipio:</h3>
                         <p><select id="municipios" name="txtDelegacion">
                            </select></p>
                         <h3>Colonia:</h3>
@@ -134,7 +135,7 @@
             <div class="container">
                 <div class="col-md-4 footer-grid footer-grid1">
                     <div class="f-bout">
-                        <h4>ContÃ¡ctanos</h4>
+                        <h4>Contáctanos</h4>
                              <h5>Correo:</h5>
                         <h6><a href="mailto:alitamonse@hotmail.com">alitamonse@hotmail.com</a></h6>
                         <h6><a href="mailto:max300394@hotmail.com">max300394@hotmail.com</a></h6>
@@ -143,7 +144,7 @@
                 </div>
                 <div class="col-md-4 footer-grid footer-grid3">
                     <div class="recent-tweet">
-                        <h4>SÃ­guenos en...</h4>
+                        <h4>Síguenos en...</h4>
                         <div class="social">	
                             <ul>	
                                 <li><a href="#"><span class="alo-icon"> </span></a></li>
@@ -161,7 +162,7 @@
         <div class="bottom">
             <div class="container">
                 <div class="copy-right">
-                    <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max VÃ¡zquez</p>
+                    <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max Vázquez</p>
                 </div>								
                 <div class="clearfix"> </div>
                 <script type="text/javascript">

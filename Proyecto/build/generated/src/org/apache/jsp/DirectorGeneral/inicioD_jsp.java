@@ -30,7 +30,7 @@ public final class inicioD_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html;charset=UTF-8");
+      response.setContentType("text/html; charset=ISO-8859-1");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -55,6 +55,7 @@ public final class inicioD_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link href=\"../css/style.css\" rel='stylesheet' type='text/css' />\n");
       out.write("        <!-- Custom Theme files -->\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\n");
       out.write("        <script type=\"application/x-javascript\"> addEventListener(\"load\", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>\n");
       out.write("        <!---- start-smoth-scrolling---->\n");
       out.write("        <script type=\"text/javascript\" src=\"../js/move-top.js\"></script>\n");

@@ -5,7 +5,7 @@
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +18,7 @@
         <link href="../css/EstiloTabla.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
         <!---- start-smoth-scrolling---->
         <script type="text/javascript" src="../js/move-top.js"></script>
@@ -80,9 +81,9 @@
                             <li><a href="sucursales.jsp">Sucursales</a></li>
                             <li><a href="managers.jsp">Managers</a></li>
                             <li><a href="#portfolio">Reportes</a></li>
-                            <li><a href="#contact">GrÃ¡ficas</a></li>
-                            <li><a href="#contact">ConfiguraciÃ³n</a></li>
-                            <li><a href="#contact">Cerrar sesiÃ³n</a></li>
+                            <li><a href="#contact">Gráficas</a></li>
+                            <li><a href="#contact">Configuración</a></li>
+                            <li><a href="#contact">Cerrar sesión</a></li>
                         </ul>
                         <a href="#" id="pull"><img src="../images/menu-icon.png" title="menu" /></a>
                     </nav>
@@ -106,9 +107,9 @@
                             <th>Apellido<br>Materno</th>
                             <th>Sucursal</th>
                             <th>Salario</th>
-                            <th>GÃ©nero</th>
+                            <th>Género</th>
                             <th>Edad</th>
-                            <th>AcciÃ³n</th>
+                            <th>Acción</th>
                             
                             <c:forEach var="managers" items="${listaDeManagers}">
                             <tr>
@@ -141,7 +142,7 @@
                 <div class="container">
                     <div class="col-md-4 footer-grid footer-grid1">
                         <div class="f-bout">
-                            <h4>ContÃ¡ctanos</h4>
+                            <h4>Contáctanos</h4>
                                  <h5>Correo:</h5>
                             <h6><a href="mailto:alitamonse@hotmail.com">alitamonse@hotmail.com</a></h6>
                             <h6><a href="mailto:max300394@hotmail.com">max300394@hotmail.com</a></h6>
@@ -150,7 +151,7 @@
                     </div>
                     <div class="col-md-4 footer-grid footer-grid3">
                         <div class="recent-tweet">
-                            <h4>SÃ­guenos en...</h4>
+                            <h4>Síguenos en...</h4>
                             <div class="social">	
                                 <ul>	
                                     <li><a href="#"><span class="alo-icon"> </span></a></li>
@@ -168,7 +169,7 @@
             <div class="bottom">
                 <div class="container">
                     <div class="copy-right">
-                        <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max VÃ¡zquez</p>
+                        <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max Vázquez</p>
                     </div>								
                     <div class="clearfix"> </div>
                     <script type="text/javascript">
