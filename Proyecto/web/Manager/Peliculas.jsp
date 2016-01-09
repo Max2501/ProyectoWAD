@@ -4,16 +4,18 @@
     Author     : Max
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Principal</title>
+        <title>Películas</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
         <!-- Custom Theme files -->
         <link href="../css/style.css" rel='stylesheet' type='text/css' />
+        <link href="../css/EstiloTabla.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -70,15 +72,17 @@
             <div class="top-header">
                 <div class="container">
                     <div class="logo">
-                        <h1>BIENVENIDO</h1>
+                        <h1>PELÍCULAS</h1>
                     </div>
                     <!----start-top-nav---->
                     <nav class="top-nav">
                         <ul class="top-nav">
                             <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                            <li><a href="../SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
-                            <li><a href="../ManagerServlet?accion=consultar">Managers</a></li>
-                            <li><a href="#portfolio">Reportes</a></li>
+                            <li><a href="EmpleadoServlet?accion=consultar">Empleados</a></li>
+                            <li><a href="PeliculaServlet?accion=consultar">Películas</a></li>
+                            <li><a href="#portfolio">Salas</a></li>
+                            <li><a href="#contact">Artículos</a></li>
+                            <li><a href="#contact">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>
                             <li><a href="#contact">Configuración</a></li>
                             <li><a href="#contact">Cerrar sesión</a></li>
@@ -92,33 +96,31 @@
         <!----- //End-header---->
 
         <div class="Themes">
+            <div class="feature-grid" style="justify-content: center; display: flex">
+                <div class="button"><span><a href="PeliculaServlet?accion=agregar">Agregar Película</a></span></div>
+            </div>
             <div class="container">
                 <div class="feature-grids">
-                    <div class="col-md-4 feature-grid">
-                        <h3>Sucursales</h3>
-                        <p>
-                            Este tipo de usuario puede realizar varias operaciones, entre éstas están
-                            alta, baja, cambios y consultas sobre las sucursales con las cuales va a contar
-                            la cadena de cine, ingresando su dirección.
-                        </p>
-                    </div>
-                    
-                    <div class="col-md-4 feature-grid">
-                        <h3>Managers</h3>
-                        <p>
-                            Puede realizar las operaciones correspondientes a los managers
-                            de cada una de las sucursales para que éstos lleven la administración
-                            por separado y organicen a sus empleados y las películas que se presentarán.
-                        </p>
-                    </div>
-
-                    <div class="col-md-4 feature-grid">
-                        <h3>Administración</h3>
-                        <p>
-                            Para llevar a cabo sus tareas puede utilizar herramientas como reportes o
-                            gráficas para facilitar el manejo de información y obtener estadísticas
-                            de las sucursales o managers que administra.
-                        </p>
+                    <div class="feature-grid">
+                        <table class="rwd-table" style="margin: 0 auto">
+                            <th>Nombre</th>
+                            <th>Duración</th>
+                            <th>Clasificación</th>
+                            <th>Género</th>
+                            
+                            <c:forEach var="pelis" items="${listaDePeliculas}">
+                            <tr>
+                                <td><c:out value="${pelis.nombrePelicula}" /></td>
+                                <td><c:out value="${pelis.duracion}"/></td>
+                                <td><c:out value="${pelis.clasificacion}"/></td>
+                                <td><c:out value="${pelis.genero}"/></td>
+                                <td>
+                                    <a href="PeliculaServlet?accion=eliminar&id=${carreras.idCarrera}"><img src='../images/eliminar.jpg'></a>
+                                    <a href="PeliculaServlet?accion=actualizar&id=${carreras.idCarrera}"><img src='../images/editar.jpg'></a>
+                                </td>
+                            </tr>
+                            </c:forEach>                            
+                        </table><br><br>
                     </div>
                     <div class="clearfix"> </div>
                 </div>

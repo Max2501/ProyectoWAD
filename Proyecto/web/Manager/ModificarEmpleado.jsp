@@ -4,11 +4,12 @@
     Author     : Max
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Agregar sucursal</title>
+        <title>Modificar empleado</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
@@ -18,24 +19,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
     <!---- start-smoth-scrolling---->
     <script type="text/javascript" src="../js/move-top.js"></script>
     <script type="text/javascript" src="../js/easing.js"></script>
     
-    <script>
-        //carga al inicio, cuando el objeto document esté listo
-        $(document).ready(function(){
-            $("#estados").load("../LlenarEstado");
-        });
-        function showMunicipios(){
-            //obtiene los objetos estados, y obtiene el valor del objeto
-            var estado = $("#estados").val(); //ya se tiene el objeto select
-            //llama al servlet con el parametro seleccionado
-            $("#municipios").load("../LlenarMunicipio", {estados:estado});
-        }
-    </script>
-
     <script type="text/javascript">
             jQuery(document).ready(function($) {
             $(".scroll").click(function (event) {
@@ -84,15 +71,17 @@
         <div class="top-header">
             <div class="container">
                 <div class="logo">
-                    <h1>AGREGAR</h1>
+                    <h1>MODIFICAR</h1>
                 </div>
                 <!----start-top-nav---->
                 <nav class="top-nav">
                     <ul class="top-nav">
                         <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                        <li><a href="../SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
-                        <li><a href="../ManagerServlet?accion=consultar">Managers</a></li>
-                        <li><a href="#portfolio">Reportes</a></li>
+                        <li><a href="SucursalServlet?accion=consultar">Empleados</a></li>
+                        <li><a href="ManagerServlet?accion=consultar">Películas</a></li>
+                        <li><a href="#portfolio">Salas</a></li>
+                        <li><a href="#contact">Artículos</a></li>
+                        <li><a href="#contact">Reportes</a></li>
                         <li><a href="#contact">Gráficas</a></li>
                         <li><a href="#contact">Configuración</a></li>
                         <li><a href="#contact">Cerrar sesión</a></li>
@@ -108,32 +97,29 @@
     <div class="Themes">
         <div class="container">
             <div class="feature-grids">
-                <form method="post" action="../SucursalServlet?accion=nuevo">
+                <form method="post" action="EmpleadoServlet?accion=actualizar&id=${empleado.idUsuario}">
                     <div class="col-md-4 feature-grid">
-                        <h3>Nombre sucursal:</h3>
-                        <p><input type="text" name="txtNombre" required/></p>
-                        <h3>Calle:</h3>
-                        <p><input type="text" name="txtCalle" required/></p>
-                        <h3>Número:</h3>
-                        <p><input type="text" name="txtNum" required/></p>
-                        <h3>Código Postal:</h3>
-                        <p><input type="text" name="txtCP" required/></p>
+                        <h3>Nombre:</h3>
+                        <p><input type="text" name="txtNombre" value="${empleado.nombre}" required/></p>
+                        <h3>Apellido Paterno</h3>
+                        <p><input type="text" name="txtApPaterno" value="${empleado.apPaterno}" required/></p>
+                        <h3>Apellido Materno:</h3>
+                        <p><input type="text" name="txtApMaterno" value="${empleado.apMaterno}" required/></p>
+                        <h3>Correo:</h3>
+                        <p><input type="text" name="txtCorreo" value="${empleado.email}" required/></p>
+                        <br><br><br><input type="submit" value="Modificar empleado">   
                     </div>
                     <div class="col-md-4 feature-grid">
-                        <h3>Entidad Federativa:</h3>
-                        <p><select id="estados" name="txtEntidad" onchange='showMunicipios()'>
-                           </select></p>
-                        <h3>Delegación o Municipio:</h3>
-                        <p><select id="municipios" name="txtDelegacion">
-                           </select></p>
-                        <h3>Colonia:</h3>
-                        <p><input type="text" name="txtColonia" required/></p>
-                        <br><input type="submit" value="Agregar sucursal">
-                        
-                        <br><div class="button"><span><a href="#">Registrar sucursal</a></span></div>
+                        <h3>Contraseña:</h3>
+                        <p><input type="password" name="txtContrasena" value="${empleado.contrasena}" required/></p>
+                        <h3>Salario:</h3>
+                        <p><input type="text" name="txtSalario" value="${empleado.salario}" required/></p>
+                        <h3>Género:</h3>
+                        <p><input type="text" name="txtGenero" value="${empleado.genero}" required/></p>
+                        <h3>Edad:</h3>
+                        <p><input type="text" name="txtEdad" value="${empleado.edad}" required/></p>                                             
                     </div>
                 </form>
-
                 <div class="clearfix"> </div>
             </div>
             <div class="clearfix"> </div>
@@ -161,7 +147,7 @@
                             <ul>	
                                 <li><a href="#"><span class="alo-icon"> </span></a></li>
                                 <li><a href="#"> <span class="fb-icon"> </span></a></li>	
-                                <li><a href="#">  <span class="t-icon"> </span></li>
+                                <li><a href="#">  <span class="t-icon"> </span></a></li>
                                 <li><a href="#"><span class="in-icon"> </span></a></li>
                             </ul>
                         </div>

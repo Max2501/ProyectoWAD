@@ -72,9 +72,21 @@
         <div class="top-header">
             <div class="container">
                 <div class="logo">
-                    <h1>Modificar</h1>
+                    <h1>MODIFICAR</h1>
                 </div>
                 <!----start-top-nav---->
+                <nav class="top-nav">
+                    <ul class="top-nav">
+                        <li class="active"><a href="#home" class="scroll">Inicio</a></li>
+                        <li><a href="../SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
+                        <li><a href="../ManagerServlet?accion=listaDeManagers">Managers</a></li>
+                        <li><a href="#portfolio">Reportes</a></li>
+                        <li><a href="#contact">Gráficas</a></li>
+                        <li><a href="#contact">Configuración</a></li>
+                        <li><a href="#contact">Cerrar sesión</a></li>
+                    </ul>
+                    <a href="#" id="pull"><img src="../images/menu-icon.png" title="menu" /></a>
+                </nav>
                 <div class="clearfix"> </div>
             </div>
         </div>
@@ -84,7 +96,7 @@
     <div class="Themes">
         <div class="container">
             <div class="feature-grids">
-                <form method="post" action="InicioSesionServlet">
+                <form method="post" action="ManagerServlet?accion=actualizar&id=${sucursal.idSucursal}">
                     <div class="col-md-4 feature-grid">
                         <h3>Nombre:</h3>
                         <p><input type="text" name="txtNombre" value="${manager.nombre}" required/></p>

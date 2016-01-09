@@ -8,33 +8,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Agregar sucursal</title>
+        <title>Agregar película</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
         <!-- Custom Theme files -->
         <link href="../css/style.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
+    </script>
     <!---- start-smoth-scrolling---->
     <script type="text/javascript" src="../js/move-top.js"></script>
     <script type="text/javascript" src="../js/easing.js"></script>
-    
-    <script>
-        //carga al inicio, cuando el objeto document esté listo
-        $(document).ready(function(){
-            $("#estados").load("../LlenarEstado");
-        });
-        function showMunicipios(){
-            //obtiene los objetos estados, y obtiene el valor del objeto
-            var estado = $("#estados").val(); //ya se tiene el objeto select
-            //llama al servlet con el parametro seleccionado
-            $("#municipios").load("../LlenarMunicipio", {estados:estado});
-        }
-    </script>
 
     <script type="text/javascript">
             jQuery(document).ready(function($) {
@@ -90,9 +77,11 @@
                 <nav class="top-nav">
                     <ul class="top-nav">
                         <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                        <li><a href="../SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
-                        <li><a href="../ManagerServlet?accion=consultar">Managers</a></li>
-                        <li><a href="#portfolio">Reportes</a></li>
+                        <li><a href="SucursalServlet?accion=consultar">Empleados</a></li>
+                        <li><a href="ManagerServlet?accion=consultar">Películas</a></li>
+                        <li><a href="#portfolio">Salas</a></li>
+                        <li><a href="#contact">Artículos</a></li>
+                        <li><a href="#contact">Reportes</a></li>
                         <li><a href="#contact">Gráficas</a></li>
                         <li><a href="#contact">Configuración</a></li>
                         <li><a href="#contact">Cerrar sesión</a></li>
@@ -108,29 +97,21 @@
     <div class="Themes">
         <div class="container">
             <div class="feature-grids">
-                <form method="post" action="../SucursalServlet?accion=nuevo">
+                <form method="post" action="../PeliculaServlet?accion=nuevo">
                     <div class="col-md-4 feature-grid">
-                        <h3>Nombre sucursal:</h3>
+                        <h3>Nombre de la Película:</h3>
                         <p><input type="text" name="txtNombre" required/></p>
-                        <h3>Calle:</h3>
-                        <p><input type="text" name="txtCalle" required/></p>
-                        <h3>Número:</h3>
-                        <p><input type="text" name="txtNum" required/></p>
-                        <h3>Código Postal:</h3>
-                        <p><input type="text" name="txtCP" required/></p>
+                        <h3>Duración:</h3>
+                        <p><input type="text" name="txtDuracion" required/></p>
+                        <h3>Género:</h3>
+                        <p><input type="text" name="txtGenero" required/></p>   
                     </div>
                     <div class="col-md-4 feature-grid">
-                        <h3>Entidad Federativa:</h3>
-                        <p><select id="estados" name="txtEntidad" onchange='showMunicipios()'>
-                           </select></p>
-                        <h3>Delegación o Municipio:</h3>
-                        <p><select id="municipios" name="txtDelegacion">
-                           </select></p>
-                        <h3>Colonia:</h3>
-                        <p><input type="text" name="txtColonia" required/></p>
-                        <br><input type="submit" value="Agregar sucursal">
-                        
-                        <br><div class="button"><span><a href="#">Registrar sucursal</a></span></div>
+                        <h3>Clasificación:</h3>
+                        <p><input type="text" name="txtClasificacion" required/></p>
+                        <h3>Resumen:</h3>
+                        <p><input type="text" name="txtResumen"/></p>      
+                        <br><br><br><input type="submit" value="Agregar película">
                     </div>
                 </form>
 

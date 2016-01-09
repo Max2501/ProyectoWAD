@@ -84,9 +84,21 @@
         <div class="top-header">
             <div class="container">
                 <div class="logo">
-                    <h1>Agregar</h1>
+                    <h1>AGREGAR</h1>
                 </div>
                 <!----start-top-nav---->
+                <nav class="top-nav">
+                    <ul class="top-nav">
+                        <li class="active"><a href="#home" class="scroll">Inicio</a></li>
+                        <li><a href="../SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
+                        <li><a href="../ManagerServlet?accion=consultar">Managers</a></li>
+                        <li><a href="#portfolio">Reportes</a></li>
+                        <li><a href="#contact">Gráficas</a></li>
+                        <li><a href="#contact">Configuración</a></li>
+                        <li><a href="#contact">Cerrar sesión</a></li>
+                    </ul>
+                    <a href="#" id="pull"><img src="../images/menu-icon.png" title="menu" /></a>
+                </nav>
                 <div class="clearfix"> </div>
             </div>
         </div>

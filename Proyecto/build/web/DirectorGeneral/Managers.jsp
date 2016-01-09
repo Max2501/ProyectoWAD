@@ -77,15 +77,15 @@
                     <!----start-top-nav---->
                     <nav class="top-nav">
                         <ul class="top-nav">
-                            <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                            <li><a href="sucursales.jsp">Sucursales</a></li>
-                            <li><a href="managers.jsp">Managers</a></li>
+                            <li class="active"><a href="DirectorGeneral/inicioD.jsp" class="scroll">Inicio</a></li>
+                            <li><a href="SucursalServlet?accion=listaDeSucursales">Sucursales</a></li>
+                            <li><a href="ManagerServlet?accion=listaDeManagers">Managers</a></li>
                             <li><a href="#portfolio">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>
                             <li><a href="#contact">Configuración</a></li>
                             <li><a href="#contact">Cerrar sesión</a></li>
                         </ul>
-                        <a href="#" id="pull"><img src="../images/menu-icon.png" title="menu" /></a>
+                        <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
                     </nav>
                     <div class="clearfix"> </div>
                 </div>
@@ -95,7 +95,7 @@
 
         <div class="Themes">
             <div class="feature-grid" style="justify-content: center; display: flex">
-                <div class="button"><span><a href="SucursalServlet?accion=agregar">Agregar Manager</a></span></div>
+                <div class="button"><span><a href="DirectorGeneral/AgregarManager.jsp">Agregar Manager</a></span></div>
             </div>
             <div class="container">
                 <div class="feature-grids">
@@ -122,8 +122,8 @@
                                 <td><c:out value="${managers.genero}"/></td>
                                 <td><c:out value="${managers.edad}"/></td>
                                 <td>
-                                    <a href="SucursalServlet?accion=eliminar&id=${carreras.idCarrera}"><img src='../images/eliminar.jpg'></a>
-                                    <a href="SucursalServlet?accion=actualizar&id=${carreras.idCarrera}"><img src='../images/editar.jpg'></a>
+                                    <a href="ManagerServlet?accion=eliminar&id=${managers.idUsuario}"><img src='../images/eliminar.jpg'></a>
+                                    <a href="ManagerServlet?accion=actualizar&id=${managers.idUsuario}"><img src='../images/editar.jpg'></a>
                                 </td>
                             </tr>
                             </c:forEach>                            

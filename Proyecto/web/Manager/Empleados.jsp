@@ -5,7 +5,7 @@
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +18,7 @@
         <link href="../css/EstiloTabla.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
         <!---- start-smoth-scrolling---->
         <script type="text/javascript" src="../js/move-top.js"></script>
@@ -71,20 +72,20 @@
             <div class="top-header">
                 <div class="container">
                     <div class="logo">
-                        <h1>Empleados</h1>
+                        <h1>EMPLEADOS</h1>
                     </div>
                     <!----start-top-nav---->
                     <nav class="top-nav">
                         <ul class="top-nav">
                             <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                            <li><a href="SucursalServlet?accion=consultar">Empleados</a></li>
-                            <li><a href="ManagerServlet?accion=consultar">PelÃ­culas</a></li>
+                            <li><a href="EmpleadoServlet?accion=consultar">Empleados</a></li>
+                            <li><a href="PeliculaServlet?accion=consultar">Películas</a></li>
                             <li><a href="#portfolio">Salas</a></li>
-                            <li><a href="#contact">ArtÃ­culos</a></li>
+                            <li><a href="#contact">Artículos</a></li>
                             <li><a href="#contact">Reportes</a></li>
-                            <li><a href="#contact">GrÃ¡ficas</a></li>
-                            <li><a href="#contact">ConfiguraciÃ³n</a></li>
-                            <li><a href="#contact">Cerrar sesiÃ³n</a></li>
+                            <li><a href="#contact">Gráficas</a></li>
+                            <li><a href="#contact">Configuración</a></li>
+                            <li><a href="#contact">Cerrar sesión</a></li>
                         </ul>
                         <a href="#" id="pull"><img src="../images/menu-icon.png" title="menu" /></a>
                     </nav>
@@ -96,7 +97,7 @@
 
         <div class="Themes">
             <div class="feature-grid" style="justify-content: center; display: flex">
-                <div class="button"><span><a href="SucursalServlet?accion=agregar">Agregar Empleado</a></span></div>
+                <div class="button"><span><a href="EmpleadoServlet?accion=agregar">Agregar Empleado</a></span></div>
             </div>
             <div class="container">
                 <div class="feature-grids">
@@ -106,9 +107,8 @@
                             <th>Apellido Paterno</th>
                             <th>Apellido Materno</th>
                             <th>Correo</th>
-                            <th>ContraseÃ±a</th>
                             <th>Salario</th>
-                            <th>GÃ©nero</th>
+                            <th>Género</th>
                             <th>Edad</th>
                             
                             <c:forEach var="empleados" items="${listaDeEmpleados}">
@@ -117,13 +117,12 @@
                                 <td><c:out value="${empleados.apPaterno}"/></td>
                                 <td><c:out value="${empleados.apMaterno}"/></td>
                                 <td><c:out value="${empleados.email}"/></td>
-                                <td><c:out value="${empleados.contrasena}"/></td>
                                 <td><c:out value="${empleados.salario}"/></td>
                                 <td><c:out value="${empleados.genero}"/></td>
                                 <td><c:out value="${empleados.edad}"/></td>
                                 <td>
-                                    <a href="SucursalServlet?accion=eliminar&id=${carreras.idCarrera}"><img src='../images/eliminar.jpg'></a>
-                                    <a href="SucursalServlet?accion=actualizar&id=${carreras.idCarrera}"><img src='../images/editar.jpg'></a>
+                                    <a href="EmpleadoServlet?accion=eliminar&id=${carreras.idCarrera}"><img src='../images/eliminar.jpg'></a>
+                                    <a href="EmpleadoServlet?accion=actualizar&id=${carreras.idCarrera}"><img src='../images/editar.jpg'></a>
                                 </td>
                             </tr>
                             </c:forEach>                            
@@ -142,7 +141,7 @@
                 <div class="container">
                     <div class="col-md-4 footer-grid footer-grid1">
                         <div class="f-bout">
-                            <h4>ContÃ¡ctanos</h4>
+                            <h4>Contáctanos</h4>
                                  <h5>Correo:</h5>
                             <h6><a href="mailto:alitamonse@hotmail.com">alitamonse@hotmail.com</a></h6>
                             <h6><a href="mailto:max300394@hotmail.com">max300394@hotmail.com</a></h6>
@@ -151,7 +150,7 @@
                     </div>
                     <div class="col-md-4 footer-grid footer-grid3">
                         <div class="recent-tweet">
-                            <h4>SÃ­guenos en...</h4>
+                            <h4>Síguenos en...</h4>
                             <div class="social">	
                                 <ul>	
                                     <li><a href="#"><span class="alo-icon"> </span></a></li>
@@ -169,7 +168,7 @@
             <div class="bottom">
                 <div class="container">
                     <div class="copy-right">
-                        <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max VÃ¡zquez</p>
+                        <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max Vázquez</p>
                     </div>								
                     <div class="clearfix"> </div>
                     <script type="text/javascript">
