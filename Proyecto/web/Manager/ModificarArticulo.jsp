@@ -4,25 +4,25 @@
     Author     : Max
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Modificar empleado</title>
+        <title>Modificar artículo</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
         <!-- Custom Theme files -->
         <link href="../css/style.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    </script>
     <!---- start-smoth-scrolling---->
     <script type="text/javascript" src="../js/move-top.js"></script>
     <script type="text/javascript" src="../js/easing.js"></script>
-    
+
     <script type="text/javascript">
             jQuery(document).ready(function($) {
             $(".scroll").click(function (event) {
@@ -77,10 +77,10 @@
                 <nav class="top-nav">
                     <ul class="top-nav">
                         <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                        <li><a href="SucursalServlet?accion=consultar">Empleados</a></li>
-                        <li><a href="ManagerServlet?accion=consultar">Películas</a></li>
-                        <li><a href="#portfolio">Salas</a></li>
-                        <li><a href="#contact">Artículos</a></li>
+                        <li><a href="EmpleadoServlet?accion=listaDeEmpleados">Empleados</a></li>
+                        <li><a href="PeliculaServlet?accion=listaDePeliculas">Películas</a></li>
+                        <li><a href="SalaServlet?accion=listaDeSalas">Salas</a></li>
+                        <li><a href="ArticuloServlet?accion=listaDeArticulos">Artículos</a></li>
                         <li><a href="#contact">Reportes</a></li>
                         <li><a href="#contact">Gráficas</a></li>
                         <li><a href="#contact">Configuración</a></li>
@@ -97,29 +97,18 @@
     <div class="Themes">
         <div class="container">
             <div class="feature-grids">
-                <form method="post" action="EmpleadoServlet?accion=actualizar&id=${empleado.idUsuario}">
+                <form method="post" action="../EmpleadoServlet?accion=nuevo">
                     <div class="col-md-4 feature-grid">
                         <h3>Nombre:</h3>
-                        <p><input type="text" name="txtNombre" value="${empleado.nombre}" required/></p>
-                        <h3>Apellido Paterno:</h3>
-                        <p><input type="text" name="txtApPaterno" value="${empleado.apPaterno}" required/></p>
-                        <h3>Apellido Materno:</h3>
-                        <p><input type="text" name="txtApMaterno" value="${empleado.apMaterno}" required/></p>
-                        <h3>Correo:</h3>
-                        <p><input type="text" name="txtCorreo" value="${empleado.email}" required/></p>
-                        <br><br><br><input type="submit" value="Modificar empleado">   
-                    </div>
-                    <div class="col-md-4 feature-grid">
-                        <h3>Contraseña:</h3>
-                        <p><input type="password" name="txtContrasena" value="${empleado.contrasena}" required/></p>
-                        <h3>Salario:</h3>
-                        <p><input type="text" name="txtSalario" value="${empleado.salario}" required/></p>
-                        <h3>Género:</h3>
-                        <p><input type="text" name="txtGenero" value="${empleado.genero}" required/></p>
-                        <h3>Edad:</h3>
-                        <p><input type="text" name="txtEdad" value="${empleado.edad}" required/></p>                                             
+                        <p><input type="text" name="txtNombre" value="${articulo.nombreArticulo}" required/></p>
+                        <h3>Categoría:</h3>
+                        <p><input type="text" name="txtCategoria" value="${articulo.categoria.nombreCategoria}" required/></p>
+                        <h3>Precio:</h3>
+                        <p><input type="text" name="txtPrecio" value="${articulo.precio}" required/></p>
+                        <br><br><br><input type="submit" value="Agregar empleado">   
                     </div>
                 </form>
+
                 <div class="clearfix"> </div>
             </div>
             <div class="clearfix"> </div>
@@ -147,7 +136,7 @@
                             <ul>	
                                 <li><a href="#"><span class="alo-icon"> </span></a></li>
                                 <li><a href="#"> <span class="fb-icon"> </span></a></li>	
-                                <li><a href="#">  <span class="t-icon"> </span></a></li>
+                                <li><a href="#">  <span class="t-icon"> </span></li>
                                 <li><a href="#"><span class="in-icon"> </span></a></li>
                             </ul>
                         </div>

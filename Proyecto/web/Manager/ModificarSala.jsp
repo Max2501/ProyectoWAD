@@ -4,25 +4,25 @@
     Author     : Max
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Modificar empleado</title>
+        <title>Modificar sala</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
         <!-- Custom Theme files -->
         <link href="../css/style.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    </script>
     <!---- start-smoth-scrolling---->
     <script type="text/javascript" src="../js/move-top.js"></script>
     <script type="text/javascript" src="../js/easing.js"></script>
-    
+
     <script type="text/javascript">
             jQuery(document).ready(function($) {
             $(".scroll").click(function (event) {
@@ -77,10 +77,10 @@
                 <nav class="top-nav">
                     <ul class="top-nav">
                         <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                        <li><a href="SucursalServlet?accion=consultar">Empleados</a></li>
-                        <li><a href="ManagerServlet?accion=consultar">Películas</a></li>
-                        <li><a href="#portfolio">Salas</a></li>
-                        <li><a href="#contact">Artículos</a></li>
+                        <li><a href="EmpleadoServlet?accion=listaDeEmpleados">Empleados</a></li>
+                        <li><a href="PeliculaServlet?accion=listaDePeliculas">Películas</a></li>
+                        <li><a href="SalaServlet?accion=listaDeSalas">Salas</a></li>
+                        <li><a href="ArticuloServlet?accion=listaDeArticulos">Artículos</a></li>
                         <li><a href="#contact">Reportes</a></li>
                         <li><a href="#contact">Gráficas</a></li>
                         <li><a href="#contact">Configuración</a></li>
@@ -97,29 +97,29 @@
     <div class="Themes">
         <div class="container">
             <div class="feature-grids">
-                <form method="post" action="EmpleadoServlet?accion=actualizar&id=${empleado.idUsuario}">
+                <form method="post" action="../SalaServlet?accion=actualizar&id=${sala.idSala}">
                     <div class="col-md-4 feature-grid">
-                        <h3>Nombre:</h3>
-                        <p><input type="text" name="txtNombre" value="${empleado.nombre}" required/></p>
-                        <h3>Apellido Paterno:</h3>
-                        <p><input type="text" name="txtApPaterno" value="${empleado.apPaterno}" required/></p>
-                        <h3>Apellido Materno:</h3>
-                        <p><input type="text" name="txtApMaterno" value="${empleado.apMaterno}" required/></p>
-                        <h3>Correo:</h3>
-                        <p><input type="text" name="txtCorreo" value="${empleado.email}" required/></p>
-                        <br><br><br><input type="submit" value="Modificar empleado">   
-                    </div>
-                    <div class="col-md-4 feature-grid">
-                        <h3>Contraseña:</h3>
-                        <p><input type="password" name="txtContrasena" value="${empleado.contrasena}" required/></p>
-                        <h3>Salario:</h3>
-                        <p><input type="text" name="txtSalario" value="${empleado.salario}" required/></p>
-                        <h3>Género:</h3>
-                        <p><input type="text" name="txtGenero" value="${empleado.genero}" required/></p>
-                        <h3>Edad:</h3>
-                        <p><input type="text" name="txtEdad" value="${empleado.edad}" required/></p>                                             
+                        <h3>Tipo Sala:</h3>
+                        <p><select id="salas" name="txtTipoSala">
+                                <option value="1">4DX</option>
+                                <option value="2">3D</option>
+                                <option value="3">2D</option>
+                                <option value="4">MACRO 3D</option>
+                           </select></p>
+                        <h3>Película:</h3>
+                        <p><input type="text" name="txtPelicula" value="${sala.Pelicula}" required/></p>
+                        <h3>Número de Filas:</h3>
+                        <p><input type="text" name="txtNumFilas" value="${sala.numeroFilas}" required/></p>
+                        <h3>Número de Asientos:</h3>
+                        <p><input type="text" name="txtNumAsientos" value="${sala.numeroAsientos}" required/></p>
+                        <h3>Horarios:</h3>
+                        <p><input type="text" name="txtHorario1" required/></p>
+                        <p><input type="text" name="txtHorario2" required/></p>
+                        <p><input type="text" name="txtHorario3" required/></p>
+                        <br><br><br><input type="submit" value="Modificar sala">   
                     </div>
                 </form>
+
                 <div class="clearfix"> </div>
             </div>
             <div class="clearfix"> </div>
@@ -160,7 +160,7 @@
         <div class="bottom">
             <div class="container">
                 <div class="copy-right">
-                    <p>Copyright &copy; 3CV2. All Rights Reserved . Design by Monse Chimal & Max Vázquez</p>
+                    <p>Copyright &copy; 3CV2. All Rights Reserved. Design by Monse Chimal & Max Vázquez</p>
                 </div>								
                 <div class="clearfix"> </div>
                 <script type="text/javascript">

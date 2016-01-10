@@ -78,9 +78,9 @@
                     <nav class="top-nav">
                         <ul class="top-nav">
                             <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                            <li><a href="EmpleadoServlet?accion=consultar">Empleados</a></li>
-                            <li><a href="PeliculaServlet?accion=consultar">Películas</a></li>
-                            <li><a href="#portfolio">Salas</a></li>
+                            <li><a href="EmpleadoServlet?accion=listaDeEmpleados">Empleados</a></li>
+                            <li><a href="PeliculaServlet?accion=listaDePeliculas">Películas</a></li>
+                            <li><a href="SalaServlet?accion=listaDeSalas">Salas</a></li>
                             <li><a href="#contact">Artículos</a></li>
                             <li><a href="#contact">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>
@@ -97,7 +97,7 @@
 
         <div class="Themes">
             <div class="feature-grid" style="justify-content: center; display: flex">
-                <div class="button"><span><a href="EmpleadoServlet?accion=agregar">Agregar Empleado</a></span></div>
+                <div class="button"><span><a href="EmpleadoServlet?accion=nuevo">Agregar Empleado</a></span></div>
             </div>
             <div class="container">
                 <div class="feature-grids">

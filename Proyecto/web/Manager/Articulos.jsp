@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Empleados</title>
+        <title>Artículos</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
@@ -24,14 +24,6 @@
         <script type="text/javascript" src="../js/move-top.js"></script>
         <script type="text/javascript" src="../js/easing.js"></script>
 
-        <script type="text/javascript">
-                jQuery(document).ready(function($) {
-                $(".scroll").click(function (event) {
-                    event.preventDefault();
-                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-                });
-            });
-        </script>
         <!---- start-smoth-scrolling---->
         <!----webfonts--->
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic|Oswald:400,300' rel='stylesheet' type='text/css'>
@@ -72,7 +64,7 @@
             <div class="top-header">
                 <div class="container">
                     <div class="logo">
-                        <h1>EMPLEADOS</h1>
+                        <h1>ARTÍCULOS</h1>
                     </div>
                     <!----start-top-nav---->
                     <nav class="top-nav">
@@ -81,7 +73,7 @@
                             <li><a href="EmpleadoServlet?accion=listaDeEmpleados">Empleados</a></li>
                             <li><a href="PeliculaServlet?accion=listaDePeliculas">Películas</a></li>
                             <li><a href="SalaServlet?accion=listaDeSalas">Salas</a></li>
-                            <li><a href="#contact">Artículos</a></li>
+                            <li><a href="ArticuloServlet?accion=listaDeArticulos">Artículos</a></li>
                             <li><a href="#contact">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>
                             <li><a href="#contact">Configuración</a></li>
@@ -97,32 +89,24 @@
 
         <div class="Themes">
             <div class="feature-grid" style="justify-content: center; display: flex">
-                <div class="button"><span><a href="EmpleadoServlet?accion=nuevo">Agregar Empleado</a></span></div>
+                <div class="button"><span><a href="ArticuloServlet?accion=nuevo">Agregar Artículo</a></span></div>
             </div>
             <div class="container">
                 <div class="feature-grids">
                     <div class="feature-grid">
                         <table class="rwd-table" style="margin: 0 auto">
                             <th>Nombre</th>
-                            <th>Apellido Paterno</th>
-                            <th>Apellido Materno</th>
-                            <th>Correo</th>
-                            <th>Salario</th>
-                            <th>Género</th>
-                            <th>Edad</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
                             
-                            <c:forEach var="empleados" items="${listaDeEmpleados}">
+                            <c:forEach var="articulos" items="${listaDeArticulos}">
                             <tr>
-                                <td><c:out value="${empleados.nombre}" /></td>
-                                <td><c:out value="${empleados.apPaterno}"/></td>
-                                <td><c:out value="${empleados.apMaterno}"/></td>
-                                <td><c:out value="${empleados.email}"/></td>
-                                <td><c:out value="${empleados.salario}"/></td>
-                                <td><c:out value="${empleados.genero}"/></td>
-                                <td><c:out value="${empleados.edad}"/></td>
+                                <td><c:out value="${articulos.nombreArticulo}" /></td>
+                                <td><c:out value="${articulos.categoria.nombreCategoría}"/></td>
+                                <td><c:out value="${articulos.precio}"/></td>
                                 <td>
-                                    <a href="EmpleadoServlet?accion=eliminar&id=${carreras.idCarrera}"><img src='../images/eliminar.jpg'></a>
-                                    <a href="EmpleadoServlet?accion=actualizar&id=${carreras.idCarrera}"><img src='../images/editar.jpg'></a>
+                                    <a href="ArticuloServlet?accion=eliminar&id=${articulos.idArticulo}"><img src='../images/eliminar.jpg'></a>
+                                    <a href="ArticuloServlet?accion=actualizar&id=${articulos.idArticulo}"><img src='../images/editar.jpg'></a>
                                 </td>
                             </tr>
                             </c:forEach>                            

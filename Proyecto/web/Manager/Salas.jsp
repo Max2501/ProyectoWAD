@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Empleados</title>
+        <title>Salas</title>
         <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
@@ -72,7 +72,7 @@
             <div class="top-header">
                 <div class="container">
                     <div class="logo">
-                        <h1>EMPLEADOS</h1>
+                        <h1>SALAS</h1>
                     </div>
                     <!----start-top-nav---->
                     <nav class="top-nav">
@@ -81,7 +81,7 @@
                             <li><a href="EmpleadoServlet?accion=listaDeEmpleados">Empleados</a></li>
                             <li><a href="PeliculaServlet?accion=listaDePeliculas">Películas</a></li>
                             <li><a href="SalaServlet?accion=listaDeSalas">Salas</a></li>
-                            <li><a href="#contact">Artículos</a></li>
+                            <li><a href="ArticuloServlet?accion=listaDeArticulos">Artículos</a></li>
                             <li><a href="#contact">Reportes</a></li>
                             <li><a href="#contact">Gráficas</a></li>
                             <li><a href="#contact">Configuración</a></li>
@@ -97,32 +97,30 @@
 
         <div class="Themes">
             <div class="feature-grid" style="justify-content: center; display: flex">
-                <div class="button"><span><a href="EmpleadoServlet?accion=nuevo">Agregar Empleado</a></span></div>
+                <div class="button"><span><a href="SalaServlet?accion=nuevo">Agregar Sala</a></span></div>
             </div>
             <div class="container">
                 <div class="feature-grids">
                     <div class="feature-grid">
                         <table class="rwd-table" style="margin: 0 auto">
-                            <th>Nombre</th>
-                            <th>Apellido Paterno</th>
-                            <th>Apellido Materno</th>
-                            <th>Correo</th>
-                            <th>Salario</th>
-                            <th>Género</th>
-                            <th>Edad</th>
+                            <th>Tipo de Sala</th>
+                            <th>Película</th>
+                            <th>Asientos</th>
+                            <th>No. Filas</th>
+                            <th colspan="3">Horarios</th>
                             
-                            <c:forEach var="empleados" items="${listaDeEmpleados}">
+                            <c:forEach var="salas" items="${listaDeSalas}">
                             <tr>
-                                <td><c:out value="${empleados.nombre}" /></td>
-                                <td><c:out value="${empleados.apPaterno}"/></td>
-                                <td><c:out value="${empleados.apMaterno}"/></td>
-                                <td><c:out value="${empleados.email}"/></td>
-                                <td><c:out value="${empleados.salario}"/></td>
-                                <td><c:out value="${empleados.genero}"/></td>
-                                <td><c:out value="${empleados.edad}"/></td>
+                                <td><c:out value="${salas.tiposala.nombreTipoSala}" /></td>
+                                <td><c:out value="${salas.Pelicula.nombrePelicula}"/></td>
+                                <td><c:out value="${salas.numeroAsientos}"/></td>
+                                <td><c:out value="${salas.numeroFilas}"/></td>
+                                <td><c:out value="${salas.horario1}"/></td>
+                                <td><c:out value="${salas.horario2}"/></td>
+                                <td><c:out value="${salas.horario3}"/></td>
                                 <td>
-                                    <a href="EmpleadoServlet?accion=eliminar&id=${carreras.idCarrera}"><img src='../images/eliminar.jpg'></a>
-                                    <a href="EmpleadoServlet?accion=actualizar&id=${carreras.idCarrera}"><img src='../images/editar.jpg'></a>
+                                    <a href="SalaServlet?accion=eliminar&id=${salas.idSala}"><img src='../images/eliminar.jpg'></a>
+                                    <a href="SalaServlet?accion=actualizar&id=${salas.idSala}"><img src='../images/editar.jpg'></a>
                                 </td>
                             </tr>
                             </c:forEach>                            

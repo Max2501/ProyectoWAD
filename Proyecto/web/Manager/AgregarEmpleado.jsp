@@ -77,10 +77,10 @@
                 <nav class="top-nav">
                     <ul class="top-nav">
                         <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                        <li><a href="EmpleadoServlet?accion=consultar">Empleados</a></li>
-                        <li><a href="PeliculaServlet?accion=consultar">Películas</a></li>
-                        <li><a href="#portfolio">Salas</a></li>
-                        <li><a href="#contact">Artículos</a></li>
+                        <li><a href="EmpleadoServlet?accion=listaDeEmpleados">Empleados</a></li>
+                        <li><a href="PeliculaServlet?accion=listaDePelículas">Películas</a></li>
+                        <li><a href="SalaServlet?accion=listaDeSalas">Salas</a></li>
+                        <li><a href="ArticuloServlet?accion=listaDeArticulos">Artículos</a></li>
                         <li><a href="#contact">Reportes</a></li>
                         <li><a href="#contact">Gráficas</a></li>
                         <li><a href="#contact">Configuración</a></li>
@@ -101,7 +101,7 @@
                     <div class="col-md-4 feature-grid">
                         <h3>Nombre:</h3>
                         <p><input type="text" name="txtNombre" required/></p>
-                        <h3>Apellido Paterno</h3>
+                        <h3>Apellido Paterno:</h3>
                         <p><input type="text" name="txtApPaterno" required/></p>
                         <h3>Apellido Materno:</h3>
                         <p><input type="text" name="txtApMaterno" required/></p>

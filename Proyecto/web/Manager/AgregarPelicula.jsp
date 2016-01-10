@@ -77,10 +77,10 @@
                 <nav class="top-nav">
                     <ul class="top-nav">
                         <li class="active"><a href="#home" class="scroll">Inicio</a></li>
-                        <li><a href="SucursalServlet?accion=consultar">Empleados</a></li>
-                        <li><a href="ManagerServlet?accion=consultar">Películas</a></li>
-                        <li><a href="#portfolio">Salas</a></li>
-                        <li><a href="#contact">Artículos</a></li>
+                        <li><a href="SucursalServlet?accion=listaDeEmpleados">Empleados</a></li>
+                        <li><a href="ManagerServlet?accion=listaDePeliculas">Películas</a></li>
+                        <li><a href="SalaServlet?accion=listaDeSalas">Salas</a></li>
+                        <li><a href="ArticuloServlet?accion=listaDeArticulos">Artículos</a></li>
                         <li><a href="#contact">Reportes</a></li>
                         <li><a href="#contact">Gráficas</a></li>
                         <li><a href="#contact">Configuración</a></li>
